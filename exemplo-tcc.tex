@@ -1,0 +1,424 @@
+\documentclass[tcc,capa]{texufpel}
+
+\usepackage[latin1]{inputenc} % acentuacao
+\usepackage{graphicx} % para inserir figuras
+
+\unidade{Centro de Desenvolvimento Tecnológico}
+\curso{Ciência da Computação}
+\nomecurso{Bacharelado em Ciência da Computação}
+\titulocurso{Bacharel em Ciência da Computação}
+
+\title{Um Blabla Blablabla com Aplicações em Blablabla}
+
+\author{Azevedo}{Ariel Furtado}
+\advisor{Pilla}{Maurício Lima}
+\collaborator{Neves}{Vilnei Marins}
+
+\keyword{palavrachave-um}
+\keyword{palavrachave-dois}
+\keyword{palavrachave-tres}
+\keyword{palavrachave-quatro}
+
+\begin{document}
+
+%\renewcommand{\advisorname}{Orientadora}           %descomente caso tenhas orientadora
+%\renewcommand{\coadvisorname}{Coorientadora}      %descomente caso tenhas coorientadora
+
+\maketitle 
+
+\sloppy
+
+\fichacatalografica
+
+\folhadeaprovacao
+
+%Opcional
+\begin{dedicatoria}
+  Dedico\ldots bla blabla blablabla bla. Bla blabla blablabla bla.\\
+  Bla blabla blablabla bla. Bla blabla blablabla bla.
+\end{dedicatoria}
+
+%Opcional
+\begin{agradecimentos}
+  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla
+  bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla
+  blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla
+  bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla
+  blabla blablabla bla.  Bla blabla blablabla bla.
+\end{agradecimentos}
+
+%Opcional
+\begin{epigrafe}
+  Bla blabla blablabla bla.\\
+  Bla blabla blablabla bla.\\
+  Bla blabla blablabla bla.\\
+  Bla blabla blablabla bla.\\
+  Bla blabla blablabla bla.\\
+  {\sc --- Fulano de Tal}
+\end{epigrafe}
+
+%Resumo em Portugues (no maximo 500 palavras)
+\begin{abstract}
+  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla
+  bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla
+  blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla
+  bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla
+  blabla blablabla bla.  Bla blabla blablabla bla.
+
+  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla
+  bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla
+  blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla
+  bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla
+  blabla blablabla bla.  Bla blabla blablabla bla.
+\end{abstract}
+
+\begin{englishabstract}%
+  {Titulo do Trabalho em Ingles}%
+  {keyword-one, keyword-two, keyword-three, keyword-four}
+  
+  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla
+  bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla
+  blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla
+  bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla
+  blabla blablabla bla.  Bla blabla blablabla bla.
+
+  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla
+  bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla
+  blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla
+  bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla
+  blabla blablabla bla.  Bla blabla blablabla bla.
+\end{englishabstract}
+
+%Lista de Figuras
+\listoffigures
+
+%Lista de Tabelas
+\listoftables
+
+%lista de abreviaturas e siglas
+\begin{listofabbrv}{SPMD}
+        \item[TI] Tecnologia da Informação
+        \item[SLA] \textit{Services Level Agreements}
+        \item[QoS] \textit{Quality of Service}
+        \item[VMM] \textit{Virtual Machine Monitor}
+        \item[ABNT] Associação Brasileira de Normas Técnicas
+\end{listofabbrv}
+
+%Sumario
+\tableofcontents
+
+\chapter{Introdução}
+introduzindo computação em nuvem
+\chapter{Computação em Nuvem}
+<<<<<<< HEAD
+falando sobre computação em nuvem
+=======
+  A \textit{Cloud Computing} ou Computação em Nuvem é uma área da computação que vem crescendo diariamente e tomando um grande espaço nas nossas vidas, de forma que pode-se dizer que estamos
+  constantemente em contato de alguma forma com a ''nuvem''. Esse conceito um tanto quanto recente, nos proporciona facilidades de vários modos diferentes como plataformas e \textit{softwares}
+  sendo disponibilizados como serviços, bem como infraestrutura, reduzindo custos tanto em espaço como recursos computacionais. Muitas empresas já utilizam esse paradigma para distribuir
+  seus \textit{softwares}, e acredita-se que ocorrerá uma migração constante para esse ambiente. Esse capítulo abordará sobre os principais conceitos e fundamentos da \textit{Cloud Computing},
+  bem como suas características e áreas de aplicação.
+  \section{Fundamentos}\label{history}
+  A premissa central da Computação em Nuvem é fornecer recursos computacionais complexos na forma de serviços que podem ser acessados através de uma rede,
+  através de um modelo de negócios onde provedores de serviços em nuvem podem cobrar dos consumidores para acessar seus serviços \cite{Buyya}.
+  
+  Porém o conceito de entregar recursos computacionais como um serviço não é necessariamente uma ideia nova para a área de TI. Em 1961, John McCarthy \cite{parkhill1966challenge}, 
+  sugeriu que a computação pudesse algum dia ser organizada como uma utilidade pública. Essa ideia era também compartilhada por um dos principais cientistas da ARPANET, Leonard Kleinrock,
+   que idealizava em 1969 que isso poderia acontecer em um futuro onde houvesse o crescimento das redes de computadores e sua evolução.
+<<<<<<< HEAD
+   
+   Mell \cite{mell2011nist} dizia que a Computação em Nuvem poderia ser entendida como um modelo que visa permitir o acesso de forma conveniente, ubíqua e sob demanda, a um conjunto de recursos computacionais configuráveis, tais como: redes, servidores, armazenamento, aplicativos e serviços, que poderiam ser rapidamente provisionados e liberados com o mínimo de esforço de gestão ou de interação com o provedor de serviços. A Figura \ref{ex_cloud} mostra um exemplo geral de Nuvem de forma que é possível notar brevemente como os aspectos citados se organizam para compor esse tipo de ambiente. Ainda nessa figura podemos visualizar a abstração de uma nuvem caracterizada pelos principais tipos de serviços que são fornecidos pelo ambiente. (\textit{i}) Aplicação, (\textit{ii}) Plataforma, (\textit{iii}) infraestrutura e alguns exemplos de recursos fornecidos por cada camada de abstração.
+  
+  \begin{figure}
+    \begin{center}
+      \includegraphics[scale=.35]{imagens/cloud.png}
+      \caption{Exemplo de uma Nuvem}
+      \label{ex_cloud}
+    \end{center}
+   \end{figure}
+ 
+Do ponto de vista do uso de recursos de \textit{hardware}, \cite{armbrust2010, fox2009} destacam três pontos centrais que colaboraram com a adoção da Computação em Nuvem:
+
+\begin{enumerate}
+	\item A ilusão de recursos de computação infinitos e disponíveis sob demanda, eliminando assim a necessidade dos usuários realizarem planejamentos de longo prazo quanto ao provisionamento de recursos.
+	\item A eliminação de um compromisso antecipado quanto ao uso de recursos e consequente alocação dos mesmos por parte dos usuário, permitindo assim que as empresas possam começar com um investimento menor e aumentar os recursos de \textit{hardware} apenas quando há um aumento nas suas necessidades.
+	\item A capacidade de pagar pelo uso de recursos de computação com base em períodos de curto prazo (horas/dias), utilizando-os conforme necessário e liberá-los quando os mesmo não forem mais úteis.
+\end{enumerate}
+
+A redução do custo operacional é um dos aspectos centrais para adoção de ambientes em nuvem. Essa redução é notada principalmente nos custos relacionados a energia elétrica, largura de banda de rede, na operação e administração de serviços ofertados por grandes \textit{datacenters}\cite{armbrust2010,fox2009}. Como os recursos podem ser rapidamente alocados e desalocados conforme a demanda, não é necessário dimensioná-los para atender a maior carga de trabalho a longo prazo, fornecendo assim a noção de elasticidade característica desse paradigma. Da mesma forma, essa flexibilidade pode garantir uma alta escalabilidade, pois os provedores de infraestrutura podem assim disponibilizar uma grande quantidade de recursos a partir do seu conjunto de servidores e torná-los acessíveis, possibilitando expandir os serviços para grandes escalas, mesmo com o rápido aumento na demanda. No entanto para que se atinja esse objetivo e amplie ainda mais a capacidade de redução de custos, é necessário um gerenciamento eficiente dos recursos que fazem parte da infraestrutura da nuvem~\cite{Buyya}.
+Pensando em um forma de economia, a Computação em Nuvem tem então causado um grande impacto na área de TI, pois visando na otimização e redução de custos e riscos respectivamente, passou-se a pensar em um ambiente onde as empresas sejam ''\textit{datacenter-less}'', ou seja, não tenham \textit{datacenters} fisícos, e sim utilizem de empresas que forneçam esses produtos e serviços envolvendo tecnologia da informação por meio de nuvem, sem que as primeiras tenham que lidar com os custos associados a administração e operação dos \textit{datacenters}\cite{armbrust2010,fox2009}, e com isso focando somente na prestação de seu serviço ou desenvolvimento de seu produto.
+
+Outros aspectos também têm contribuído para a adoção da Computação em Nuvem e sua popularização enquanto paradigma computacional. É possível destacar pelo menos dois aspectos principais: \textbf{(i)} aumento na capacidade de processamento e armazenamento de \textit{hardware}, bem como sua a rápida diminuição do custo, incentivando sua adoção massiva na construção de \textit{datacenters}; \textbf{(ii)} a adoção generalizada de serviços de computação e aplicações da \textit{Web}, provocando crescimento exponencial da quantidade de dados disponíveis, especialmente os relacionados com o conteúdo da \textit{Internet}, envolvendo redes sociais, comércio eletrônico, computação móvel \cite{armbrust2010,fox2009,4738445}.
+\section{Caracteristícas}
+
+De uma forma geral, podemos imaginar a Computação em Nuvem como uma forma de sistema paralelo e distribuído, que consiste em um conjunto de computadores interligados e virtualizados, que, dinamicamente, são provisionados e apresentados como um ou mais recursos de computação unificada. O acesso e utilização desses recursossão regidos através do \textit{Services Level Agreements} (SLA), ou Acordos de Nível de Serviço, estabelecidos através de negociação entre o prestador de serviço e os consumidores, e que determinam o nível de qualidade aceitável para um serviço disponivilizado pela Computação em Nuvem \cite{Buyya}.
+
+\subsection{Caracteristícas Essenciais}\label{caracessencial}
+No entanto a Computação em Nuvem possui algumas características essencias que a definem e fazem um modelo distinto de outros paradigmas. De acordo com Mell \cite{mell2011nist}, existem cinco características essencias que distinguem a Computação em Nuvem.
+
+\subsubsection{\textit{Self-Service} sob demanda}
+O usuário pode adquirir unilateralmente recurso computacional, como tempo de processamento no servidor ou armazenamento na rede na medida em que necessite e sem precisar
+de interação humana com os provedores de cada serviço. O \textit{hardware} e o \textit{software} dentro
+de uma nuvem podem ser automaticamente reconfigurados, orquestrados e estas modificações são apresentadas de forma transparente para os usuários, que possuem perfis
+diferentes e assim podem personalizar os seus ambientes computacionais, por exemplo,
+instalação de \textit{software} e configuração de rede para a definição de determinados privilégios.
+
+\subsubsection{Amplo Acesso}
+Recursos são disponibilizados por meio da rede e acessados através de mecanismos padronizados que possibilitam o uso por plataformas \textit{thin} ou \textit{thin client}, tais como celulares e\textit{laptops}. A interface de acesso à nuvem não obriga os usuários a mudar suas condições e ambientes de trabalho, como por exemplo, linguagens de programação e sistema operacional. Já os \textit{softwares} clientes instalados localmente para o acesso à nuvem são leves, como um navegador de \textit{Internet}.
+
+\subsubsection{\textit{Pooling} de recursos}
+Os recursos computacionais do provedor são organizados em um pool para servir múltiplos usuários usando um modelo \textit{multitenant}, com diferentes recursos físicos e virtuais,
+dinamicamente atribuídos e ajustados de acordo com a demanda dos usuários. Estes usuários não precisam ter conhecimento da localização física dos recursos computacionais,
+podendo somente especificar a localização em um nível mais alto de abstração, tais comoo país, estado ou \textit{datacenter}.
+
+\subsubsection{Elasticidade Rápida}
+Recursos podem ser adquiridos de forma rápida e elástica, em alguns casos automaticamente, caso haja a necessidade de escalar com o aumento da demanda, e liberados, na retração dessa demanda. Para os usuários, os recursos disponíveis para uso parecem ser ilimitados e podem ser adquiridos em qualquer quantidade e a qualquer momento.
+A virtualização ajuda na característica de elasticidade rápida na computação nuvem, criando várias instâncias de recursos requisitados utilizando um único recurso real 
+\cite{aboulnaga2009}. Além disso, a virtualização é uma maneira de abstrair características físicas de uma plataforma computacional dos usuários, exibindo outro \textit{hardware}
+virtual e emulando um ou mais ambientes que podem ser independentes ou não.
+
+\subsubsection{Modelos de Serviços}
+Sistemas em nuvem automaticamente controlam e otimizam o uso de recursos por meio de uma capacidade de medição. A automação é realizada em algum nível de abstração
+apropriado para o tipo de serviço, tais como armazenamento, processamento, largura de banda e contas de usuário ativas. O uso de recursos pode ser monitorado e controlado,
+possibilitando transparência para o provedor e o usuário do serviço utilizado. Para garantir o QoS (\textit{Quality of Service}) ou Qualidade de Serviço, pode-se utilizar a abordagem baseada em níveis de acordo de serviço SLA. Ele fornece informações sobre os níveis de disponibilidade, funcionalidade, desempenho ou outros atributos do serviço como o
+faturamento e até mesmo penalidades em caso de violação destes níveis.
+
+\subsection{Virtualização}\label{virtualization}
+Outra caracteristíca importante para o paradigma de Computação em Nuvem é o uso da a virtualização, pois ela oferece a abstração necessária para que os recursos computacionais físicos (processamento, armazenamento, recursos de rede) possam ser unificados como um conjunto de recursos mais abstratos, permitindo que outros serviços possam ser construídos sobre estes \cite{4738445}. Atravpes dela é possivel compartilhar a mesma máquina física com múltiplos sistemas operacionais e/ou aplicações de usuários finais, mantendo garantias ao desempenho \cite{5557989} e isolamento entre as mesmas. Tal propriedade garante certo nível de encapsulamento e flexibilidade que permite que tais máquinas possam ser manipuladas e tenham suas aplicações migradas entre servidores com maior facilidade do que se isto ocorresse usando-se somente máquinas físicas, garantindo assim melhor segurança, gerenciamento e isolamento.
+Na Figura \ref{virtualImage} vemos a diferença entre uma máquina física e o funcionamento de um ambiente virtualizado, onde a camada inferior representa a camada física, a camada intermediária representa o sistema operacional que é executado no servidor físico e o \textit{software} de virtualização ou \textit{Virtual Machine Monitor} VMM, responsável por gerenciar o acesso ao \textit{hardware} subjacente e gerenciar e dar suporte a próxima camada, que representa as máquinas virtuais de fato, onde cada máquina virtual possui um sistema operacional independente e executa suas próprias aplicações.
+
+
+  \begin{figure}
+    \begin{center}
+      \includegraphics{imagens/virtualImage.png}
+      \caption{Exemplo de máquina física e virtual}
+      \label{virtualImage}
+    \end{center}
+   \end{figure}
+   
+\section{Modelos de Implantação}\label{implantationmodel}
+Tratando-se do acesso e disponibilidade de ambientes de computação em nuvem, tem-se diferentes tipos de modelos de implantação. A restrição ou abertura de acesso depende do processo de negócios, do tipo de informação e do nível de visão desejado. Pode-se perceber que certas empresas não desejamque todos os usuários possam acessar e utilizar determinados recursos no seu ambiente de computação em nuvem. Assim sendo, pensa-se então em criar ambientes mais restritor, onde somente usuários devidamente autorizados possam utilizar os serviços providos.
+Os modelos de implantação da Computação em Nuvem podem ser: Público, Privado, Híbrido e Comunitário \cite{nist2009}.
+A Figura \ref{implantationmodelImage} mostra os respectivos modelos de implantação de nuvens.
+  \begin{itemize}
+   \item 
+   \textit{Privado}:
+   No modelo de implantação privado, a infra-estrutura de nuvem é utilizada exclusivamente
+para uma organização, sendo esta nuvem local ou remota e administrada pela própria empresa ou por terceiros. Neste modelo de implantação são empregados políticas de acesso
+aos serviços. As técnicas utilizadas para prover tais características podem ser em nível de gerenciamento de redes, configurações dos provedores de serviços e a utilização de
+tecnologias de autenticação e autorização. Um exemplo deste modelo seria o cenário de uma universidade e seus departamentos. A universidade pode estar interessada em disponibilizar serviços para seus departamentos e outros órgãos desta instituição não devem ter
+acesso a esses serviços.
+\item
+\textit{Público}: No modelo de implantação público, a infra-estrutura de nuvens é disponibilizada para o
+público em geral, sendo acessado por qualquer usuário que conheça a localização do serviço. Neste modelo de implantação não podem ser aplicadas restrições de acesso quanto
+ao gerenciamento de redes, e menos ainda, aplicar técnicas de autenticação e autorização.
+
+\item
+\textit{Comunitário}: No modelo de implantação comunitário ocorre o compartilhamento de uma nuvem por diversas empresas, sendo a nuvem suportada por uma comunidade específica que partilhou seus interesses, tais como a missão, os requisitos de segurança, política e considerações sobre flexibilidade. Este tipo modelo de implantação pode existir localmente ou remotamente e pode ser administrado por alguma empresa da comunidade ou por terceiros.
+
+\item
+\textit{Híbrido}: No modelo de implantação híbrido, existe uma composição de duas ou mais nuvens, que podem ser privadas, comunitárias ou públicas e que permanecem como entidades únicas e ligadas por uma tecnologia padronizada ou proprietária que permite a portabilidade de dados e aplicações permitindo por exemplo um balanceamento de carga entre nuvens distintas \cite{wind2011}.
+  \end{itemize}  
+
+  \begin{figure}[!htb]
+    \begin{center}
+      \includegraphics[scale=.35]{imagens/implantationmodelImage.png}
+      \caption{Modelos de Implantação}
+      \label{implantationmodelImage}
+    \end{center}
+   \end{figure}
+\subsection{Classificação de um Ambiente em Nuvem}
+Outra forma que podemos classificar as nuvens são:
+=======
+>>>>>>> 40b91b99b29e4d9912812cc13ff902d2a325e171
+>>>>>>> 798d4d67f589c027abf691f94887ecef42f8bb9f
+\chapter{OpenSatck}
+falando sobre open stack
+\section{teste}
+sessão de open stack
+\section{teste}
+teste
+\subsection{teste}
+subseção teste
+\subsubsection{teste}
+subsubseção teste
+\chapter{Logica \textit{Fuzzy}}
+\chapter{Desenvolvimento}
+\chapter{Metologia}
+
+\section{Outra seção}
+
+  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla
+  bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla
+  blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla
+  bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla
+  blabla blablabla bla.  Bla blabla blablabla bla~\ref{tabela}.
+
+\begin{table}
+\begin{center}
+\caption{Nome da Tabela}\label{tabela}
+\begin{tabular}{p{4cm}p{5cm}p{6cm}}
+\hline
+Blabla & Blabla & Blablabla\\
+\hline
+{\small Bla} & {\small Blabla} & {\small\em Bla blabla blablabla blabla
+  blablabla blabla blablabla.}\\
+{\small Bla} & {\small Blabla} & {\small\em Bla blabla blablabla blabla
+  blablabla blabla blablabla.}\\
+{\small Bla} & {\small Blabla} & {\small\em Bla blabla blablabla blabla
+  blablabla blabla blablabla.}\\
+{\small Bla} & {\small Blabla} & {\small\em Bla blabla blablabla blabla
+  blablabla blabla blablabla.}\\
+{\small Bla} & {\small Blabla} & {\small\em Bla blabla blablabla blabla
+  blablabla blabla blablabla.}\\
+{\small Bla} & {\small Blabla} & {\small\em Bla blabla blablabla blabla
+  blablabla blabla blablabla.}\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\subsection{Uma subseção}
+
+  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla
+  bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla
+  blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla
+  bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla
+  blabla blablabla bla.  Bla blabla blablabla bla.
+
+\chapter{Desenvolvimento}
+
+  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+  Bla blabla blablabla bla~\ref{tabela2}.
+
+\begin{table}
+\begin{center}
+\caption{Nome da Tabela}\label{tabela2}
+\begin{tabular}{p{4cm}p{5cm}p{6cm}}
+\hline
+Blabla & Blabla & Blablabla\\
+\hline
+{\small Bla} & {\small Blabla} & {\small\em Bla blabla blablabla blabla
+  blablabla blabla blablabla.}\\
+{\small Bla} & {\small Blabla} & {\small\em Bla blabla blablabla blabla
+  blablabla blabla blablabla.}\\
+{\small Bla} & {\small Blabla} & {\small\em Bla blabla blablabla blabla
+  blablabla blabla blablabla.}\\
+{\small Bla} & {\small Blabla} & {\small\em Bla blabla blablabla blabla
+  blablabla blabla blablabla.}\\
+{\small Bla} & {\small Blabla} & {\small\em Bla blabla blablabla blabla
+  blablabla blabla blablabla.}\\
+{\small Bla} & {\small Blabla} & {\small\em Bla blabla blablabla blabla
+  blablabla blabla blablabla. Conforme a figura~\ref{figura}}\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+
+
+
+\chapter{Conclusão}
+
+  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla
+  bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla
+  blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla
+  bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla
+  blabla blablabla bla.  Bla blabla blablabla bla.
+
+  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla
+  bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla
+  blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla
+  bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla
+  blabla blablabla bla.  Bla blabla blablabla bla.
+
+% Bibliografia
+% http://liinwww.ira.uka.de/bibliography/index.html
+% um site que cataloga no formato bibtex a bibliografia em computacao
+%\bibliography{nomedoarquivo.bib} (sem extensao)
+%\bibliographystyle{formato.bst} (sem extensao)
+
+\bibliography{bibliografia}
+\bibliographystyle{abnt}
+
+% Anexos (Opcional)
+\annex 
+\chapter{Um Anexo}
+
+  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla
+  bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla
+  blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla
+  bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla
+  blabla blablabla bla.  Bla blabla blablabla bla.
+
+  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla
+  bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla
+  blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla
+  bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla
+  blabla blablabla bla.  Bla blabla blablabla bla.
+
+\chapter{Outro Anexo}
+
+  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla
+  bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla
+  blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla
+  bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla
+  blabla blablabla bla.  Bla blabla blablabla bla.
+
+  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla
+  bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla
+  blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
+  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla
+  bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
+  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla
+  blabla blablabla bla.  Bla blabla blablabla bla.
+
+%Faz a capa do CDROM
+
+
+\end{document}
+
