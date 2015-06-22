@@ -206,7 +206,7 @@ possibilitando transparência para o provedor e o usuário do serviço utilizado. P
 faturamento e até mesmo penalidades em caso de violação destes níveis.
 
 \subsection{Virtualização}\label{virtualization}
-Outra caracteristíca importante para o paradigma de Computação em Nuvem é o uso da a virtualização, pois ela oferece a abstração necessária para que os recursos computacionais físicos (processamento, armazenamento, recursos de rede) possam ser unificados como um conjunto de recursos mais abstratos, permitindo que outros serviços possam ser construídos sobre estes \cite{4738445}. Atravpes dela é possivel compartilhar a mesma máquina física com múltiplos sistemas operacionais e/ou aplicações de usuários finais, mantendo garantias ao desempenho \cite{5557989} e isolamento entre as mesmas. Tal propriedade garante certo nível de encapsulamento e flexibilidade que permite que tais máquinas possam ser manipuladas e tenham suas aplicações migradas entre servidores com maior facilidade do que se isto ocorresse usando-se somente máquinas físicas, garantindo assim melhor segurança, gerenciamento e isolamento.
+Outra caracteristíca importante para o paradigma de Computação em Nuvem é o uso da a virtualização, pois ela oferece a abstração necessária para que os recursos computacionais físicos (processamento, armazenamento, recursos de rede) possam ser unificados como um conjunto de recursos mais abstratos, permitindo que outros serviços possam ser construídos sobre estes \cite{4738445}. Através dela é possivel compartilhar a mesma máquina física com múltiplos sistemas operacionais e/ou aplicações de usuários finais, mantendo garantias ao desempenho \cite{5557989} e isolamento entre as mesmas. Tal propriedade garante certo nível de encapsulamento e flexibilidade que permite que tais máquinas possam ser manipuladas e tenham suas aplicações migradas entre servidores com maior facilidade do que se isto ocorresse usando-se somente máquinas físicas, garantindo assim melhor segurança, gerenciamento e isolamento.
 Na Figura \ref{virtualImage} vemos a diferença entre uma máquina física e o funcionamento de um ambiente virtualizado, onde a camada inferior representa a camada física, a camada intermediária representa o sistema operacional que é executado no servidor físico e o \textit{software} de virtualização ou \textit{Virtual Machine Monitor} VMM, responsável por gerenciar o acesso ao \textit{hardware} subjacente e gerenciar e dar suporte a próxima camada, que representa as máquinas virtuais de fato, onde cada máquina virtual possui um sistema operacional independente e executa suas próprias aplicações.
 
 
@@ -220,7 +220,7 @@ Na Figura \ref{virtualImage} vemos a diferença entre uma máquina física e o func
    
 \subsection{Modelos de Implantação}\label{implantationmodel}
 Tratando-se do acesso e disponibilidade de ambientes de computação em nuvem, tem-se diferentes tipos de modelos de implantação. A restrição ou abertura de acesso depende do processo de negócios, do tipo de informação e do nível de visão desejado. Pode-se perceber que certas empresas não desejamque todos os usuários possam acessar e utilizar determinados recursos no seu ambiente de computação em nuvem. Assim sendo, pensa-se então em criar ambientes mais restritor, onde somente usuários devidamente autorizados possam utilizar os serviços providos.
-Os modelos de implantação da Computação em Nuvem podem ser: Público, Privado, Híbrido e Comunitário \cite{nist2009}.
+Os modelos de implantação da Computação em Nuvem podem ser: Público, Privado, Híbrido e Comunitário \citep{nist2009}.
 A Figura \ref{implantationmodelImage} mostra os respectivos modelos de implantação de nuvens.
   \begin{itemize}
    \item 
@@ -291,24 +291,31 @@ Outra das características do paradigma de Computação em Nuvem, é os serviços dis
    Na computação em nuvem, vários modelos evoluíram rapidamente para aproveitar as tecnologias de \textit{software}, plataformas de programação, armazenamento de dados e infraestrutura de \textit{hardware} como serviços. Enquanto estes modelos se referem ao núcleo dos serviços de computação em nuvem, suas inter-relações têm sido ambíguas e a viabilidade de sua interoperabilidade é questionável. Além disso, cada serviço da nuvem tem interfaces e protocolos diferentes. Como os diversos serviços estão dispersos no ambiente e possuem caracteristícas distintas, desenvolver técnicas eficazes e eficientes para descrever, descobri e compor estes serviços torna-se um desafio interessante.
    \subsection{Gerenciamento de Recursos}\label{featuresmanagement}
    Pelo fato de a computação em nuvem prover recursos computacionais de forma transparente para seus usuários, o provedor por ter que se preocupar com a parte física da nuvem, deve então ter como gerenciar os recursos utilizados pelo ambiente, como por exemplo energia, processamento, armazenamento, etc... Com os problemas ecológicos e ambientais atualmente, a parte de gerencia de energia tem se tornado cada vez mais um desafio para os provedores desse serviço, e por isso surgem campos de pesquisa para as \textit{Green Clouds}, ou Nuvens Verdes, termo que refêrencia a computação em nuvem de uma forma limpa e ecologicamente consciente, onde se pensa de uma forma de otimizar todo e qualquer consumo de recurso computacional dos \textit{datacenters}.
+   \section{\textit{OpenStack}}
+    \textit{OpenStack} é um sistema operacional em nuvem que controla grandes quantidades de computação, armazenamento e recursos de rede ao longo de um \textit{datacenter}, tudo gerenciado através de um painel que permite aos administradores controle equanto fornecem a seus usuários recursos computacionais através de uma interface \textit{web} \cite{openstack}.
+    
+    A Figura \ref{openstack} mostra como funciona a arquitetura do \textit{openstack}, e através dela podemos entender melhor seu funcionamento. Vemos que há um \textit{hardware} padrão, onde é de fato executado o ambiente, este por sua vez tem um ambiente de serviços compartilhados, que são Computação, Rede, e Armazenamento, gerenciados todos por um quadro de tarefas (\textit{DashBoard}) e em seguida disponibilizando a aplicação.
+    
+   \begin{figure}[!htb]
+    \begin{center}
+      \includegraphics[scale=.60]{imagens/openstack.png}
+      \caption{Arquitetura do \textit{OpenStack} \cite{openstack}}
+      \label{openstack}
+    \end{center}
+   \end{figure}
+   
+   O \textit{openstack} é um conjunto de tecnologias capaz de controlar múltiplas infraetruturas de computação, armazenamento e recursos de rede, permitindo que o usuário e pesquisadores possam fornecer recur
+
    \section{Considerações Sobre o Capítulo}
    
    Neste capítulo foi abordado os principais fundamentos e conceitos sobre o paradigma de Computação em Nuvem, fazendo uma introdução sobre o tema e mostrando aspectos relacionados com a computação em nuvem. Além disso alguns dos desafios foram discutidos, e um deles, Gerenciamento de Recursos, subseção \ref{featuresmanagement} é o tema abordado nessa pesquisa.
    
 \chapter{Logica \textit{Fuzzy}}
 Nesse capítulo serão abordados os principais fundamentos sobre Lógica \textit{Fuzzy}, LF. Após mostrar alguns conceitos sobre o assunto, procura-se fazer uma relação com o tema da pesquisa, mostrando assim que essa técnica pode dar um suporte melhor na tomada de decisões para um gerenciamento e uma otimização melhores dos recursos utilizados pela unidade física da Nuvem.
-\chapter{OpenStack}
-falando sobre open stack
-\section{teste}
-sessão de open stack
-\section{teste}
-teste
-\subsection{teste}
-subseção teste
-\subsubsection{teste}
-subsubseção teste
+\section{Fundamentos}
 
-\chapter{Desenvolvimento}
+
+\chapter{Trabalhos Relacionados}
 \chapter{Metologia}
 
 \section{Outra seção}
