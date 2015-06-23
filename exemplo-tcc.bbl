@@ -1,0 +1,100 @@
+\begin{thebibliography}{\hspace{\parindent}}
+
+\bibitem[ABOULNAGA~A.~SALEM~K.(2009)ABOULNAGA~A.~SALEM~K.]{aboulnaga2009}
+  ABOULNAGA~A.~SALEM~K., S. A. A. M. U. K. P. K.~S\@. Deploying Database
+  Appliances in the Cloud. \textbf{IEEE Data Eng. Bull.}, [S.l.], v.32, 2009.
+
+\bibitem[ADDIS et~al.(2010)ADDIS; ARDAGNA; PANICUCCI; ZHANG]{5557989} ADDIS,
+  B.; ARDAGNA, D.; PANICUCCI, B.; ZHANG, L\@. Autonomic Management of Cloud
+  Service Centers with Availability Guarantees. In: CLOUD COMPUTING (CLOUD),
+  2010 IEEE 3RD INTERNATIONAL CONFERENCE ON, 2010. \textbf{Anais{\ldots}}
+  [S.l.:~s.n.], 2010. p.220 --227.
+
+\bibitem[AMAZON(2013)AMAZON]{amazon2013amazon-elastic-} AMAZON. \textbf{Amazon
+  Elastic Compute Cloud (Amazon {EC2)}}. http://aws.amazon.com/pt/ec2/.
+
+\bibitem[ARMBRUST et~al.(2010)ARMBRUST; FOX; GRIFFITH; JOSEPH; KATZ; KONWINSKI;
+  LEE; PATTERSON; RABKIN; STOICA et~al.]{armbrust2010} ARMBRUST, M.; FOX, A.;
+  GRIFFITH, R.; JOSEPH, A.~D.; KATZ, R.; KONWINSKI, A.; LEE, G.; PATTERSON, D.;
+  RABKIN, A.; STOICA, I. et~al\@. A view of cloud computing.
+  \textbf{Communications of the ACM}, [S.l.], v.53, n.4, p.50--58, 2010.
+
+\bibitem[BUYYA et~al.(2009)BUYYA; YEO; VENUGOPAL; BROBERG; BRANDIC]{Buyya}
+  BUYYA, R.; YEO, C.~S.; VENUGOPAL, S.; BROBERG, J.; BRANDIC, I\@. Cloud
+  computing and emerging IT platforms: Vision, hype, and reality for delivering
+  computing as the 5th utility. \textbf{Future Gener. Comput. Syst.},
+  Amsterdam, The Netherlands, The Netherlands, v.25, n.6, p.599--616,
+  June~2009.
+
+\bibitem[DROPBOX(2012)DROPBOX]{dropbox} DROPBOX. \textbf{Página Web}.
+  https://www.dropbox.com/.
+
+\bibitem[FACEBOOK(2012)FACEBOOK]{facebook} FACEBOOK. \textbf{Página Web}.
+  http://www.facebook.com/.
+
+\bibitem[FOSTER et~al.(2008)FOSTER; ZHAO; RAICU; LU]{4738445} FOSTER, I.; ZHAO,
+  Y.; RAICU, I.; LU, S\@. Cloud Computing and Grid Computing 360-Degree
+  Compared. In: GRID COMPUTING ENVIRONMENTS WORKSHOP, 2008. GCE '08, 2008.
+  \textbf{Anais{\ldots}} [S.l.:~s.n.], 2008. p.1 --10.
+
+\bibitem[FOX; GRIFFITH et~al.(2009)FOX; GRIFFITH et~al.]{fox2009} FOX, A.;
+  GRIFFITH, R. et~al\@. Above the clouds: A Berkeley view of cloud computing.
+  \textbf{Dept. Electrical Eng. and Comput. Sciences, University of California,
+  Berkeley, Tech. Rep. UCB/EECS}, [S.l.], v.28, 2009.
+
+\bibitem[GMAIL(2012)GMAIL]{gmail} GMAIL. \textbf{Página Web}.
+  http://mail.google.com/.
+
+\bibitem[GOOGLE(2013)GOOGLE]{google2013google-app-engi} GOOGLE. \textbf{Google
+  App Engine}. https://developers.google.com/appengine/.
+
+\bibitem[HOLTZMAN(1970)HOLTZMAN]{holtzman1970nonlinear} HOLTZMAN, J.~M\@.
+  \textbf{Nonlinear system theory}: a functional analysis approach. [S.l.]:
+  Prentice Hall, 1970.
+
+\bibitem[KAUFMANN; GUPTA(1985)KAUFMANN; GUPTA]{kaufmann1985zntroductlon}
+  KAUFMANN, A.; GUPTA, M\@. \textbf{ZntroductLon to Fuzzy Arithmetic}: Theory
+  and ApplLcatzons. [S.l.]: Van Nostrand Reinhold, New York, 1985.
+
+\bibitem[LEE(1990)LEE]{lee1990fuzzy} LEE, C.~C\@. Fuzzy logic in control
+  systems: fuzzy logic controller. II. \textbf{Systems, Man and Cybernetics,
+  IEEE Transactions on}, [S.l.], v.20, n.2, p.419--435, 1990.
+
+\bibitem[MAMDANI; ASSILIAN(1975)MAMDANI; ASSILIAN]{mamdani1975experiment}
+  MAMDANI, E.~H.; ASSILIAN, S\@. An experiment in linguistic synthesis with a
+  fuzzy logic controller. \textbf{International journal of man-machine
+  studies}, [S.l.], v.7, n.1, p.1--13, 1975.
+
+\bibitem[MELL; GRANCE(2011)MELL; GRANCE]{mell2011nist} MELL, P.; GRANCE, T\@.
+  The NIST definition of cloud computing (draft). \textbf{NIST special
+  publication}, [S.l.], v.800, p.145, 2011.
+
+\bibitem[NIST(2009)NIST]{nist2009} NIST. \textbf{National Institute of
+  Standards and Technology Draft Definition of Cloud Computing}.
+
+\bibitem[OPENSTACK(2015)OPENSTACK]{openstack} OPENSTACK. \textbf{Página do
+  projeto}. \\url{http://www.openstack.org}.
+
+\bibitem[PARKHILL(1966)PARKHILL]{parkhill1966challenge} PARKHILL, D.~F\@.
+  \textbf{The challenge of the computer utility}. [S.l.]: Addison-Wesley
+  Publishing Company Reading, 1966. v.2.
+
+\bibitem[SALESFORCE(2012)SALESFORCE]{salesforce} SALESFORCE. \textbf{Página
+  Web}. http://www.salesforce.com.
+
+\bibitem[WEI~Z.; CHI(2009)WEI~Z.; CHI]{Wei2009} WEI~Z., P.~G.; CHI, C.-H\@.
+  Scalable transactions for web applications in the cloud. \textbf{In
+  Euro-Par}, [S.l.], p.442--53, 2009.
+
+\bibitem[WIND(2011)WIND]{wind2011} WIND, S\@. Open source cloud computing
+  management platforms: Introduction, comparison, and recommendations for
+  implementation. In: OPEN SYSTEMS (ICOS), 2011 IEEE CONFERENCE ON, 2011.
+  \textbf{Anais{\ldots}} [S.l.:~s.n.], 2011. p.175 --179.
+
+\bibitem[ZADEH(1988)ZADEH]{zadeh1988fuzzy} ZADEH, L.~A\@. Fuzzy logic.
+  \textbf{Computer}, [S.l.], n.4, p.83--93, 1988.
+
+\bibitem[ZADEH(1965)ZADEH]{zadeh1965fuzzy} ZADEH, L\@. Fuzzy Sets.
+  \textbf{Information and Control}, [S.l.], v.8, p.338--353, 1965.
+
+\end{thebibliography}
