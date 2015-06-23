@@ -56,12 +56,8 @@ Obrigado a todos!
 
 %Opcional
 \begin{epigrafe}
-  Bla blabla blablabla bla.\\
-  Bla blabla blablabla bla.\\
-  Bla blabla blablabla bla.\\
-  Bla blabla blablabla bla.\\
-  Bla blabla blablabla bla.\\
-  {\sc --- Fulano de Tal}
+ \textit{So long and thanks for all the fish.}
+  {\sc  -- Todos golfinhos da Terra}
 \end{epigrafe}
 
 %Resumo em Portugues (no maximo 500 palavras)
@@ -126,6 +122,7 @@ Obrigado a todos!
         \item[SGBD] Sistema Gerenciador de Banco de Dados
         \item[API]  \textit{Application Programming Interface}
         \item[LF]   Lógica \textit{Fuzzy}
+        \item[IP]  \textit{Internet Protocol}
 \end{listofabbrv}
 
 %Sumario
@@ -291,24 +288,39 @@ Outra das características do paradigma de Computação em Nuvem, é os serviços dis
    Na computação em nuvem, vários modelos evoluíram rapidamente para aproveitar as tecnologias de \textit{software}, plataformas de programação, armazenamento de dados e infraestrutura de \textit{hardware} como serviços. Enquanto estes modelos se referem ao núcleo dos serviços de computação em nuvem, suas inter-relações têm sido ambíguas e a viabilidade de sua interoperabilidade é questionável. Além disso, cada serviço da nuvem tem interfaces e protocolos diferentes. Como os diversos serviços estão dispersos no ambiente e possuem caracteristícas distintas, desenvolver técnicas eficazes e eficientes para descrever, descobri e compor estes serviços torna-se um desafio interessante.
    \subsection{Gerenciamento de Recursos}\label{featuresmanagement}
    Pelo fato de a computação em nuvem prover recursos computacionais de forma transparente para seus usuários, o provedor por ter que se preocupar com a parte física da nuvem, deve então ter como gerenciar os recursos utilizados pelo ambiente, como por exemplo energia, processamento, armazenamento, etc... Com os problemas ecológicos e ambientais atualmente, a parte de gerencia de energia tem se tornado cada vez mais um desafio para os provedores desse serviço, e por isso surgem campos de pesquisa para as \textit{Green Clouds}, ou Nuvens Verdes, termo que refêrencia a computação em nuvem de uma forma limpa e ecologicamente consciente, onde se pensa de uma forma de otimizar todo e qualquer consumo de recurso computacional dos \textit{datacenters}.
-   \section{\textit{OpenStack}}
+   \section{\textit{Openstack}}
     \textit{OpenStack} é um sistema operacional em nuvem que controla grandes quantidades de computação, armazenamento e recursos de rede ao longo de um \textit{datacenter}, tudo gerenciado através de um painel que permite aos administradores controle equanto fornecem a seus usuários recursos computacionais através de uma interface \textit{web} \cite{openstack}.
     
-    A Figura \ref{openstack} mostra como funciona a arquitetura do \textit{openstack}, e através dela podemos entender melhor seu funcionamento. Vemos que há um \textit{hardware} padrão, onde é de fato executado o ambiente, este por sua vez tem um ambiente de serviços compartilhados, que são Computação, Rede, e Armazenamento, gerenciados todos por um quadro de tarefas (\textit{DashBoard}) e em seguida disponibilizando a aplicação.
+    A Figura \ref{openstack} mostra como funciona a arquitetura do \textit{openstack}, e através dela podemos entender melhor seu funcionamento. Vemos que há um \textit{hardware} padrão, onde é de fato executado o ambiente, este por sua vez tem um ambiente de serviços compartilhados, que são Computação, Rede, e Armazenamento, gerenciados todos por um quadro de tarefas (\textit{DashBoard}) e em seguida fica a aplicação.
     
    \begin{figure}[!htb]
     \begin{center}
       \includegraphics[scale=.60]{imagens/openstack.png}
-      \caption{Arquitetura do \textit{OpenStack} \cite{openstack}}
+      \caption{Arquitetura do \textit{Openstack} \cite{openstack}}
       \label{openstack}
     \end{center}
    \end{figure}
    
-   O \textit{openstack} é um conjunto de tecnologias capaz de controlar múltiplas infraetruturas de computação, armazenamento e recursos de rede, permitindo que o usuário e pesquisadores possam fornecer recur
+   O \textit{openstack} é um conjunto de tecnologias capaz de controlar múltiplas infraetruturas de computação, armazenamento e recursos de rede, a seguir será explicado um pouco mais detalhado como funciona cada parte.
+   
+   \subsection{\textit{Openstack Compute}:} o Sistema Operacional em Nuvem \textit{Openstack} permite às empresas e aos prestadores de serviço oferecer recursos computacionais sob demanda graças ao provisionamento e gerenciamento de grandes redes de máquinas virtuais. Estes recursos são acessíveis através de APIs para desenvolvedores de aplicativos em nuvem e por meio de interfaces \textit{web} para administradores e usuários.
+   \begin{itemize}
+    \item  \textbf{Arquitetura Flexível:} \textit{Openstack} é projetado para oferecer flexibilidade conforme você utiliza sua nuvem, com \textit{hardware} e requisitos de \textit{software} livres, ou seja, não proprietários e a habilidade de conectar com sistemas legados e de tecnologias de terceiros. É projetado para suportar, e além disso, gerenciar e automatizar cargas de computação e pode operar com uma larga gama de tecnologias de virtualização disponíveis.
+   \end{itemize}
+   \subsection{\textit{Openstack Storage}:}
+   Além da tecnologia tradicional de armazenamento de classe empresarial , muitas organizações têm agora uma variedade de necessidades de armazenamento com diferentes requisitos de desempenho e preço. OpenStack tem base para \textit{Object Storage} e \textit{Block Storage}, com muitas opções de implantação para cada, dependendo do caso de uso.
+
+  O primeiro é ideal para o armazenamento de baixo custo, \textit{scale-out}. Ele fornece uma plataforma de armazenamento, totalmente distribuída,  de armazenamento acessível que pode ser integrado diretamente em aplicativos ou utilizados para \textit{backup}, arquivamento e retenção de dados. Já \textit{Block Storage} permite que os dispositivos de bloco sejam expostos e conectados para calcular instâncias de armazenamento expandido, melhor desempenho e integração com plataformas de armazenamento corporativo , tais como \textit{NetApp} , \textit{Nexenta} e \textit{SolidFire}
+
+  \subsection{\textit{Openstack Networking}:} As redes de \textit{datacenters} atuais contém mais dispositivos conectados do que mesmo servidores, equipamento de redes, sistemas de armazenamento e aplicações de segurança -- muitos dos quais são comumente divididos em máquinas e redes virtuais. O número de endereços IPs, configurações de rotas e até mesmo regras de segurança podem crescer até a casa dos milhões facilmente. Técnicas tradicionais de gerenciamento de redes falham rapidamente ao tentar prover uma verdadeira escalabilidade a um sistema desse porte. Ao mesmo tempo, os clientes esperam maior facilidade de acesso e mais velocidade e garantia de qualidade.
+  \textit{Openstack Networking} é um sistema escalonável e plugável, orientado a API, para gerenciamento de redes e endereços IPs. Como outros aspectos de um sistema operacional em nuvem ele pode ser usado para aumentar o valor de \textit{datacenters} ativos.
+
 
    \section{Considerações Sobre o Capítulo}
    
-   Neste capítulo foi abordado os principais fundamentos e conceitos sobre o paradigma de Computação em Nuvem, fazendo uma introdução sobre o tema e mostrando aspectos relacionados com a computação em nuvem. Além disso alguns dos desafios foram discutidos, e um deles, Gerenciamento de Recursos, subseção \ref{featuresmanagement} é o tema abordado nessa pesquisa.
+   Neste capítulo foi abordado os principais fundamentos e conceitos sobre o paradigma de Computação em Nuvem, fazendo uma introdução sobre o tema e mostrando aspectos relacionados com a computação em nuvem. Além disso alguns dos desafios foram discutidos, e um deles, Gerenciamento de Recursos, Subseção \ref{featuresmanagement} é o tema abordado nessa pesquisa.
+   Ainda também é feita uma introdução ao \textit{OpenStack}, que será a ferramenta utilizada para desenvolvimento do ambiente em Nuvem e realização dos testes.
+   No capítulo a seguir, veremos alguns fundamentos e conceitos de Lógica \textit{Fuzzy}, e como essa técnica pode ser útil e relevanta na recente pesquisa, bem como alguns trabalhos relacionados onde a lógica \textit{fuzzy} é utilizada para técnicas semelenhas as que serão utilizadas ao longo desse projteo.
    
 \chapter{Logica \textit{Fuzzy}}
 Nesse capítulo serão abordados os principais fundamentos sobre Lógica \textit{Fuzzy}, LF. Após mostrar alguns conceitos sobre o assunto, procura-se fazer uma relação com o tema da pesquisa, mostrando assim que essa técnica pode dar um suporte melhor na tomada de decisões para um gerenciamento e uma otimização melhores dos recursos utilizados pela unidade física da Nuvem.
