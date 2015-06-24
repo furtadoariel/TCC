@@ -41,12 +41,11 @@
 %Opcional
 \begin{agradecimentos}
 Bom, nunca fui muito bom com palavras, mas tentarei ao máximo mencionar e agradecer a todos envolvidos e que me apoiaram ao longo desse caminho.
-Por ordem dos fatos então, primeiro gostaria de agradecer aos Vogons, por não terem destruído a terra para criar uma estrada do hyperespaço, se isso tivesse ocorrido, provavelmente eu não estaria aqui hoje. Depois disso, gostaria de agradecer ao meu tio Ademir que sempre me incentivou a entrar em uma universidade e me ajudou muito para que isso ocorresse, agradecer também a todos meus amigos de Canoas, Erick, Digo, Flávio (nem tanto), Gregory e Dandy, também os pais do Erick, tio Élio e Tia ''Cenira'', e do Digo, Tia Rita e Tio Flávio,  os quais alguns até me deram moradia por um tempo e me suportaram e apoiaram, como fazem ainda hoje.
-Depois disso agradecer a minha avó por ter me acolhido de volta a cidade para então embarcar nessa jornada que é a primeira graduação, e meus amigos da cidade que sempre pagaram bebida pra mim, sem eles não seria a mesma coisa.
-Agradecimentos especiais então a quatro amigos que são mais irmãos que qualquer outra coisa, Pablo, Bruno, Henrique e Victor que sempre estiveram comigo pra tudo, e sempre me apoiaram até nas piores coisas que já me aconteceram, também agradecimentos especiais a todos os meus colegas que continuam no curso hoje, que são poucos, tipo 3 ou 4 (risos), João, Balotinha, Reginho Freddy e Mauricio, tá, 5, que apesar de todo esse tempo e de quase não frequentar mais as mesmas disciplinas continuam de boa e junto pra sempre dar uma força,  ao Vilnei (Já pagou bebida pra mim, merece o espaço dele aqui) que sempre me ajudou, inclusive esse trabalho foi feito por causa dele, usando como base a própria pesquisa dele.
+Por ordem dos fatos então, primeiro gostaria de agradecer aos Vogons, por não terem destruído a terra para criar uma estrada do hyperespaço, se isso tivesse ocorrido, provavelmente eu não estaria aqui hoje. Depois disso, gostaria de agradecer ao meu tio Ademir que sempre me incentivou a entrar em uma universidade e me ajudou muito para que isso ocorresse, agradecer também a todos meus amigos de Canoas, Erick, Digo, Flávinho (nem tanto), Gregory e Dandy, também os pais do Erick, tio Élio e Tia ''Cenira'', e do Digo, Tia Rita e Tio Flávio,  os quais alguns até me deram moradia por um tempo e me suportaram e apoiaram, como fazem ainda hoje. Depois disso agradecer a minha avó, Diva,  por ter me acolhido de volta a cidade para então embarcar nessa jornada que é a primeira graduação, e meus amigos da cidade que apesar de tudo sempre pagaram bebida pra mim, sem eles não seria a mesma coisa.\\
+Agradecimentos especiais então a três amigos que são mais irmãos que qualquer outra coisa, Pablo, Bruno, Henrique que sempre estiveram comigo pra tudo, e sempre me apoiaram até nas piores coisas que já me aconteceram, também agradecimentos especiais a todos os meus colegas que continuam no curso hoje, que são poucos, tipo 3 ou 4 (risos), João, Balotinha, Reginho Freddy e Mauricio, tá, 5, que apesar de todo esse tempo e de quase não frequentar mais as mesmas disciplinas continuam de boa e junto pra sempre dar uma força,  ao Vilnei (Já pagou bebida pra mim, merece o espaço dele aqui) que sempre me ajudou, inclusive esse trabalho foi feito por causa dele, usando como base a própria pesquisa dele.
 Depois também gostaria de agradecer ao meu orientador, que a maioria pode até não achar, mas é um dos professores mais legais (não é puxar saco e vocês sabem) do curso, que aceitou a mim como orientando sabendo o quão preguiçoso e folgado eu sou. (risos de novo)
 PS: espero que saiba na verdade.
-Bom, e pra finalizar e não me incomodar, agradeço a minha namorada que não me deixa sair pra ficar escrevendo isso. (Se não cito ela, acho que ela me bate)
+Bom, e pra finalizar e não me incomodar, agradeço a minha namorada que não me deixa sair pra ficar escrevendo isso. (Se não cito ela, acho que ela me bate).
 Bom, acho que não esqueci de ninguém, e se esqueci é porque não merecia estar aqui mesmo.
 
 É isso!!!
@@ -289,9 +288,9 @@ Outra das características do paradigma de Computação em Nuvem, é os serviços dis
    \subsection{Gerenciamento de Recursos}\label{featuresmanagement}
    Pelo fato de a computação em nuvem prover recursos computacionais de forma transparente para seus usuários, o provedor por ter que se preocupar com a parte física da nuvem, deve então ter como gerenciar os recursos utilizados pelo ambiente, como por exemplo energia, processamento, armazenamento, etc... Com os problemas ecológicos e ambientais atualmente, a parte de gerencia de energia tem se tornado cada vez mais um desafio para os provedores desse serviço, e por isso surgem campos de pesquisa para as \textit{Green Clouds}, ou Nuvens Verdes, termo que refêrencia a computação em nuvem de uma forma limpa e ecologicamente consciente, onde se pensa de uma forma de otimizar todo e qualquer consumo de recurso computacional dos \textit{datacenters}.
    \section{\textit{Openstack}}
-    \textit{OpenStack} é um sistema operacional em nuvem que controla grandes quantidades de computação, armazenamento e recursos de rede ao longo de um \textit{datacenter}, tudo gerenciado através de um painel que permite aos administradores controle enquanto fornecem a seus usuários recursos computacionais através de uma interface \textit{web} \cite{openstack}.
+    O \textit{openstack} é um conjunto de tecnologias capaz de controlar múltiplas infraetruturas de computação, armazenamento e recursos de rede, nesta sessão será explicado um pouco mais detalhado como funciona essa ferramenta.
     
-    A Figura \ref{openstack} mostra como funciona a arquitetura do \textit{openstack}, e através dela podemos entender melhor seu funcionamento. Vemos que há um \textit{hardware} padrão, onde é de fato executado o ambiente, este por sua vez tem um ambiente de serviços compartilhados, que são Computação, Rede, e Armazenamento, gerenciados todos por um quadro de tarefas, (\textit{DashBoard}), e em seguida fica a aplicação.
+    A Figura \ref{openstack} mostra como funciona a arquitetura do \textit{openstack}, a qual podemos ver que há um \textit{hardware} padrão, onde é de fato executado o ambiente, este por sua vez tem um ambiente de serviços compartilhados, que são Computação, Rede, e Armazenamento, gerenciados todos por um painel de ferramentas, (\textit{DashBoard}), e em seguida fica a camada de aplicação, que pode estar qualquer um desses tipos de serviço.
     
    \begin{figure}[!htb]
     \begin{center}
@@ -300,20 +299,27 @@ Outra das características do paradigma de Computação em Nuvem, é os serviços dis
       \label{openstack}
     \end{center}
    \end{figure}
+   \subsection{Introduzindo o \textit{OpenStack}}
+    
+   O \textit{OpenStack} permite a seus usuários desenvolver máquinas virtuais e outras instancias que operam diferentes tarefas para gerenciar um ambiente em nuvem. Ele faz com que escalonamento horizantal se torne mais fácil de ser feito, o que significa que tarefas que se benificiam de serem executadas de forma concorrente possam servir de forma mais fácil mais ou menos usuários na nuvem somente subindo mais instancias. (e.g : uma aplicação móvel que precisa se comunicar com um servidor remoto pode ter como dividir o trabalho de comunicação com cada usuário de através de muitas instancias diferentes, todos se comunicando entre si, mas escalonando rapidamente e facilmente conforme a aplicação ganha mais usuários.)
    
-   O \textit{openstack} é um conjunto de tecnologias capaz de controlar múltiplas infraetruturas de computação, armazenamento e recursos de rede, a seguir será explicado um pouco mais detalhado como funciona cada parte.
+   \subsection{Como o \textit{OpenStack} é usado em um ambiente em nuvem?}
+   A nuvem serve basicamente para prover serviços computacionais para usuários finais em um amiente remoto, onde o \textit{software} atual executa como um serviço em servidores confiáveis e escalonáveis ao invés de executar no computador de cada usuário. Basicamente \textit{OpenStack} provê IaaS, o que significa que ele provê infraestrutura como serviço, o que significa que ele faz ser fácil para o usuário adicionar rapidamente uma nova instância da nuvem sobre qual os outros componentes da nuvem podem rodar. Tipicamente a infraestrutura executa uma plataforma sobre qual o desenvolvedor pode criar aplicações, as quais são entregadas para o usuário final.
    
-   \subsection{\textit{Openstack Compute}:} o Sistema Operacional em Nuvem \textit{Openstack} permite às empresas e aos prestadores de serviço oferecer recursos computacionais sob demanda graças ao provisionamento e gerenciamento de grandes redes de máquinas virtuais. Estes recursos são acessíveis através de APIs para desenvolvedores de aplicativos em nuvem e por meio de interfaces \textit{web} para administradores e usuários.
+   % http://opensource.com/resources/what-is-openstack
+   
+   
+  % \subsection{\textit{Openstack Compute}:} o Sistema Operacional em Nuvem \textit{Openstack} permite às empresas e aos prestadores de serviço oferecer recursos computacionais sob demanda graças ao provisionamento e gerenciamento de grandes redes de máquinas virtuais. Estes recursos são acessíveis através de APIs para desenvolvedores de aplicativos em nuvem e por meio de interfaces \textit{web} para administradores e usuários.
 
-  \textbf{Arquitetura Flexível:} \textit{Openstack} é projetado para oferecer flexibilidade conforme você utiliza sua nuvem, com \textit{hardware} e requisitos de \textit{software} livres, ou seja, não proprietários e a habilidade de conectar com sistemas legados e de tecnologias de terceiros. É projetado para suportar, e além disso, gerenciar e automatizar cargas de computação e pode operar com uma larga gama de tecnologias de virtualização disponíveis.
+  %\textbf{Arquitetura Flexível:} \textit{Openstack} é projetado para oferecer flexibilidade conforme você utiliza sua nuvem, com \textit{hardware} e requisitos de \textit{software} livres, ou seja, não proprietários e a habilidade de conectar com sistemas legados e de tecnologias de terceiros. É projetado para suportar, e além disso, gerenciar e automatizar cargas de computação e pode operar com uma larga gama de tecnologias de virtualização disponíveis.
 
-   \subsection{\textit{Openstack Storage}:}
-   Além da tecnologia tradicional de armazenamento de classe empresarial , muitas organizações têm agora uma variedade de necessidades de armazenamento com diferentes requisitos de desempenho e preço. OpenStack tem base para \textit{Object Storage} e \textit{Block Storage}, com muitas opções de implantação para cada, dependendo do caso de uso.
+   %\subsection{\textit{Openstack Storage}:}
+   %Além da tecnologia tradicional de armazenamento de classe empresarial , muitas organizações têm agora uma variedade de necessidades de armazenamento com diferentes requisitos de desempenho e preço. OpenStack tem base para \textit{Object Storage} e \textit{Block Storage}, com muitas opções de implantação para cada, dependendo do caso de uso.
 
-  O primeiro é ideal para o armazenamento de baixo custo, \textit{scale-out}. Ele fornece uma plataforma de armazenamento acessível, totalmente distribuída, que pode ser integrado diretamente em aplicativos ou utilizados para \textit{backup}, arquivamento e retenção de dados. Já \textit{Block Storage} permite que os dispositivos de bloco sejam expostos e conectados para calcular instâncias de armazenamento expandido, melhor desempenho e integração com plataformas de armazenamento corporativo , tais como \textit{NetApp} , \textit{Nexenta} e \textit{SolidFire}.
+  %O primeiro é ideal para o armazenamento de baixo custo, \textit{scale-out}. Ele fornece uma plataforma de armazenamento acessível, totalmente distribuída, que pode ser integrado diretamente em aplicativos ou utilizados para \textit{backup}, arquivamento e retenção de dados. Já \textit{Block Storage} permite que os dispositivos de bloco sejam expostos e conectados para calcular instâncias de armazenamento expandido, melhor desempenho e integração com plataformas de armazenamento corporativo , tais como \textit{NetApp} , \textit{Nexenta} e \textit{SolidFire}.
 
-  \subsection{\textit{Openstack Networking}:} As redes de \textit{datacenters} atuais contém mais dispositivos conectados do que mesmo servidores, equipamento de redes, sistemas de armazenamento e aplicações de segurança -- muitos dos quais são comumente divididos em máquinas e redes virtuais. O número de endereços IPs, configurações de rotas e até mesmo regras de segurança podem crescer até a casa dos milhões facilmente. Técnicas tradicionais de gerenciamento de redes falham rapidamente ao tentar prover uma verdadeira escalabilidade a um sistema desse porte. Ao mesmo tempo, os clientes esperam maior facilidade de acesso e mais velocidade e garantia de qualidade.
-  \textit{Openstack Networking} é um sistema escalonável e plugável, orientado a API, para gerenciamento de redes e endereços IPs. Como outros aspectos de um sistema operacional em nuvem ele pode ser usado para aumentar o valor de \textit{datacenters} ativos.
+  %\subsection{\textit{Openstack Networking}:} As redes de \textit{datacenters} atuais contém mais dispositivos conectados do que mesmo servidores, equipamento de redes, sistemas de armazenamento e aplicações de segurança -- muitos dos quais são comumente divididos em máquinas e redes virtuais. O número de endereços IPs, configurações de rotas e até mesmo regras de segurança podem crescer até a casa dos milhões facilmente. Técnicas tradicionais de gerenciamento de redes falham rapidamente ao tentar prover uma verdadeira escalabilidade a um sistema desse porte. Ao mesmo tempo, os clientes esperam maior facilidade de acesso e mais velocidade e garantia de qualidade.
+  %\textit{Openstack Networking} é um sistema escalonável e plugável, orientado a API, para gerenciamento de redes e endereços IPs. Como outros aspectos de um sistema operacional em nuvem ele pode ser usado para aumentar o valor de \textit{datacenters} ativos.
 
 
    \section{Considerações Sobre o Capítulo}
@@ -357,9 +363,9 @@ sistemas de controle resultantes proporcionam um resultado mais acurado, além de
 \caption{Nome da Tabela}\label{tabela}
 \begin{tabular}{p{4cm}p{5cm}p{6cm}}
 \hline
-Blabla & Blabla & Blablabla\\
+teste & teste1 & teste2\\
 \hline
-{\small Bla} & {\small Blabla} & {\small\em Bla blabla blablabla blabla
+{\small teste} & {\small Blabla} & {\small\em Bla blabla blablabla blabla
   blablabla blabla blablabla.}\\
 {\small Bla} & {\small Blabla} & {\small\em Bla blabla blablabla blabla
   blablabla blabla blablabla.}\\
