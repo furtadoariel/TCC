@@ -8,16 +8,17 @@
 \nomecurso{Bacharelado em Ciência da Computação}
 \titulocurso{Bacharel em Ciência da Computação}
 
-\title{Um Blabla Blablabla com Aplicações em Blablabla}
+\title{Um Módulo de Gerenciamento e Sensoreamento de Recursos Computacionais de um Ambiente em Nuvem com Lógica Fuzzy}
 
 \author{Azevedo}{Ariel Furtado}
 \advisor{Pilla}{Maurício Lima}
 \collaborator{Neves}{Vilnei Marins}
 
-\keyword{palavrachave-um}
-\keyword{palavrachave-dois}
-\keyword{palavrachave-tres}
-\keyword{palavrachave-quatro}
+\keyword{Computação em Nuvem}
+\keyword{Módulo Fuzzy}
+\keyword{Logica Fuzzy}
+\keyword{Openstack}
+\keyword{Gerenciamento}
 
 \begin{document}
 
@@ -34,8 +35,10 @@
 
 %Opcional
 \begin{dedicatoria}
-  Dedico\ldots bla blabla blablabla bla. Bla blabla blablabla bla.\\
-  Bla blabla blablabla bla. Bla blabla blablabla bla.
+  Dedico esse TCC principalmente a mim mesmo!!! Sem mim ele não teria saído, com certeza!
+  Também dedico a minha avó, e minha tia que me ajudaram ao longo de todo o caminho.
+  
+  E dedico a todos os meus amigos, os quais alguns cito nos agradecimentos, outros não, mas a todos vocês dedico esse trabalho.
 \end{dedicatoria}
 
 %Opcional
@@ -61,46 +64,19 @@ Obrigado a todos!
 
 %Resumo em Portugues (no maximo 500 palavras)
 \begin{abstract}
-  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla
-  bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
-  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla
-  blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
-  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla
-  bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
-  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla
-  blabla blablabla bla.  Bla blabla blablabla bla.
-
-  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla
-  bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
-  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla
-  blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
-  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla
-  bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
-  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla
-  blabla blablabla bla.  Bla blabla blablabla bla.
+ 
+ Esse projeto de graduação tem como objetivo criar e analisar uma técnica de sensoreamento de recursos computacionais utilizados por um servidor no qual está hospedado um ambiente em nuvem, com a ajuda de lógica \textit{fuzzy} para a tomada de decisões.
+ 
+ Assim com base na lógica \textit{fuzzy} será construido o módulo de tomada de decisões que analisará os recursos computacionais de um ambiente com carga de trabalho e gerará resultados que serão analisados posteriormente
 \end{abstract}
 
 \begin{englishabstract}%
-  {Titulo do Trabalho em Ingles}%
-  {keyword-one, keyword-two, keyword-three, keyword-four}
-  
-  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla
-  bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
-  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla
-  blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
-  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla
-  bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
-  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla
-  blabla blablabla bla.  Bla blabla blablabla bla.
-
-  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla
-  bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
-  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla
-  blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
-  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla
-  bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
-  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla
-  blabla blablabla bla.  Bla blabla blablabla bla.
+  {A Computational Resource Management and Sensing Module of a Cloud Environment with Fuzzy Logic}%
+  {Cloud Computing, Fuzzy Logic, Management, Resources}
+    
+  This graduation project aims to create and analyze a sensing technique of computational resources used by a server that is hosted a cloud environment with fuzzy logic help in decision making .
+ 
+  So based on fuzzy logic will be built the decision-making module that will analyze the computational resources of a workload with environment and generate results that will be analyzed
 \end{englishabstract}
 
 %Lista de Figuras
@@ -127,9 +103,14 @@ Obrigado a todos!
 %Sumario
 \tableofcontents
 
-\chapter{Introdução}
-introduzindo computação em nuvem
-\chapter{Computação em Nuvem}
+\chapter{Introdução}\label{intro}
+A computação em Nuvem tem tido um crescimento notável nos últimos anos. Cada vez mais esse paradigma tem se estabelecido em nossas vidas facilitando nosso dia-a-dia, tanto para profissionais da área, como para pessoas totalmente desligadas. Dificilmente uma pessoa que use um computador não utilize mesmo que indiretamente algum serviço da nuvem, e com a popularização da \textit{internet} e dos computadores, bem como avanço tecnológico é bem raro uma pessoa que não utilize um computador, ou até um telefone móvel que tenha acesso à rede. Isso faz com que a computação em nuvem seja cada vez mais tendência na tecnologia e garante cada vez mais demanda para esse serviço.
+
+Mas mesmo a nuvem precisa estar alocada fisicamente em algum lugar, e muito provavelmente um \textit{datacenter} responsável pela disponibilização dos serviços em nuvem. 
+ Tendo isso em mente, pensa-se então uma forma de como otimizar a utilização dos recursos fisicos disponives por esse \textit{datacenter} na gerencia desse ambiente fazendo o sensoreamento do consumo de recursos.
+ 
+ Esse documento está organizado da seguinte forma: No Capítulo \ref{intro} fica a Introdução do trabalho, onde é feita uma breve abordagem do problema e mostra a estrutura do documento, no Capítulo \ref{cloud} fala-se sobre a Computação em Nuvem e seus conceitos e fundamentos, bem como caracteristicas e é desafios. No Capítulo \ref{fuzzy} trata-se sobre a Lógica \textit{Fuzzy} em si, e nos seus fundamentos, também é falado sobre um sistema \textit{fuzzy} simples e suas abordagens.
+\chapter{Computação em Nuvem}\label{cloud}
 
   A \textit{Cloud Computing} ou Computação em Nuvem é uma área da computação que vem crescendo diariamente e tomando um grande espaço nas nossas vidas, de forma que pode-se dizer que estamos
   constantemente em contato de alguma forma com a ''nuvem''. Esse conceito um tanto quanto recente, nos proporciona facilidades de vários modos diferentes como plataformas e \textit{softwares}
@@ -138,14 +119,14 @@ introduzindo computação em nuvem
   bem como suas características e áreas de aplicação.
   \section{Fundamentos}\label{history}
   A premissa central da Computação em Nuvem é fornecer recursos computacionais complexos na forma de serviços que podem ser acessados através de uma rede,
-  através de um modelo de negócios onde provedores de serviços em nuvem podem cobrar dos consumidores para acessar seus serviços \citet{Buyya}.
+  através de um modelo de negócios onde provedores de serviços em nuvem podem cobrar dos consumidores para acessar seus serviços \cite{Buyya}.
   
-  Porém o conceito de entregar recursos computacionais como um serviço não é necessariamente uma ideia nova para a área de TI. Em 1961, John McCarthy \citet{parkhill1966challenge}, 
+  Porém o conceito de entregar recursos computacionais como um serviço não é necessariamente uma ideia nova para a área de TI. Em 1961, John McCarthy \cite{parkhill1966challenge}, 
   sugeriu que a computação pudesse algum dia ser organizada como uma utilidade pública. Essa ideia era também compartilhada por um dos principais cientistas da ARPANET, Leonard Kleinrock,
    que idealizava em 1969 que isso poderia acontecer em um futuro onde houvesse o crescimento das redes de computadores e sua evolução.
 
    
-   Mell \citet{mell2011nist} dizia que a Computação em Nuvem poderia ser entendida como um modelo que visa permitir o acesso de forma conveniente, ubíqua e sob demanda, a um conjunto de recursos computacionais configuráveis, tais como: redes, servidores, armazenamento, aplicativos e serviços, que poderiam ser rapidamente provisionados e liberados com o mínimo de esforço de gestão ou de interação com o provedor de serviços. A Figura \ref{ex_cloud} mostra um exemplo geral de Nuvem de forma que é possível notar brevemente como os aspectos citados se organizam para compor esse tipo de ambiente. Ainda nessa figura podemos visualizar a abstração de uma nuvem caracterizada pelos principais tipos de serviços que são fornecidos pelo ambiente. (\textit{i}) Aplicação, (\textit{ii}) Plataforma, (\textit{iii}) infraestrutura e alguns exemplos de recursos fornecidos por cada camada de abstração.
+   Mell \cite{mell2011nist} dizia que a Computação em Nuvem poderia ser entendida como um modelo que visa permitir o acesso de forma conveniente, ubíqua e sob demanda, a um conjunto de recursos computacionais configuráveis, tais como: redes, servidores, armazenamento, aplicativos e serviços, que poderiam ser rapidamente provisionados e liberados com o mínimo de esforço de gestão ou de interação com o provedor de serviços. A Figura \ref{ex_cloud} mostra um exemplo geral de Nuvem de forma que é possível notar brevemente como os aspectos citados se organizam para compor esse tipo de ambiente. Ainda nessa figura podemos visualizar a abstração de uma nuvem caracterizada pelos principais tipos de serviços que são fornecidos pelo ambiente. (\textit{i}) Aplicação, (\textit{ii}) Plataforma, (\textit{iii}) infraestrutura e alguns exemplos de recursos fornecidos por cada camada de abstração.
   
   \begin{figure}
     \begin{center}
@@ -155,7 +136,7 @@ introduzindo computação em nuvem
     \end{center}
    \end{figure}
  
-Do ponto de vista do uso de recursos de \textit{hardware}, \citet{armbrust2010, fox2009} destacam três pontos centrais que colaboraram com a adoção da Computação em Nuvem:
+Do ponto de vista do uso de recursos de \textit{hardware}, \cite{armbrust2010, fox2009} destacam três pontos centrais que colaboraram com a adoção da Computação em Nuvem:
 
 \begin{enumerate}
 	\item A ilusão de recursos de computação infinitos e disponíveis sob demanda, eliminando assim a necessidade dos usuários realizarem planejamentos de longo prazo quanto ao provisionamento de recursos.
@@ -163,16 +144,16 @@ Do ponto de vista do uso de recursos de \textit{hardware}, \citet{armbrust2010, 
 	\item A capacidade de pagar pelo uso de recursos de computação com base em períodos de curto prazo (horas/dias), utilizando-os conforme necessário e liberá-los quando os mesmo não forem mais úteis.
 \end{enumerate}
 
-A redução do custo operacional é um dos aspectos centrais para adoção de ambientes em nuvem. Essa redução é notada principalmente nos custos relacionados a energia elétrica, largura de banda de rede, na operação e administração de serviços ofertados por grandes \textit{datacenters}~\citet{armbrust2010,fox2009}. Como os recursos podem ser rapidamente alocados e desalocados conforme a demanda, não é necessário dimensioná-los para atender a maior carga de trabalho a longo prazo, fornecendo assim a noção de elasticidade característica desse paradigma. Da mesma forma, essa flexibilidade pode garantir uma alta escalabilidade, pois os provedores de infraestrutura podem assim disponibilizar uma grande quantidade de recursos a partir do seu conjunto de servidores e torná-los acessíveis, possibilitando expandir os serviços para grandes escalas, mesmo com o rápido aumento na demanda. No entanto para que se atinja esse objetivo e amplie ainda mais a capacidade de redução de custos, é necessário um gerenciamento eficiente dos recursos que fazem parte da infraestrutura da nuvem~\citet{Buyya}.
-Pensando em um forma de economia, a Computação em Nuvem tem então causado um grande impacto na área de TI, pois visando na otimização e redução de custos e riscos respectivamente, passou-se a pensar em um ambiente onde as empresas sejam ''\textit{datacenter-less}'', ou seja, não tenham \textit{datacenters} fisícos, e sim utilizem de empresas que forneçam esses produtos e serviços envolvendo tecnologia da informação por meio de nuvem, sem que as primeiras tenham que lidar com os custos associados a administração e operação dos \textit{datacenters}~\citet{armbrust2010}, e com isso focando somente na prestação de seu serviço ou desenvolvimento de seu produto.
+A redução do custo operacional é um dos aspectos centrais para adoção de ambientes em nuvem. Essa redução é notada principalmente nos custos relacionados a energia elétrica, largura de banda de rede, na operação e administração de serviços ofertados por grandes \textit{datacenters}~\cite{armbrust2010,fox2009}. Como os recursos podem ser rapidamente alocados e desalocados conforme a demanda, não é necessário dimensioná-los para atender a maior carga de trabalho a longo prazo, fornecendo assim a noção de elasticidade característica desse paradigma. Da mesma forma, essa flexibilidade pode garantir uma alta escalabilidade, pois os provedores de infraestrutura podem assim disponibilizar uma grande quantidade de recursos a partir do seu conjunto de servidores e torná-los acessíveis, possibilitando expandir os serviços para grandes escalas, mesmo com o rápido aumento na demanda. No entanto para que se atinja esse objetivo e amplie ainda mais a capacidade de redução de custos, é necessário um gerenciamento eficiente dos recursos que fazem parte da infraestrutura da nuvem~\cite{Buyya}.
+Pensando em um forma de economia, a Computação em Nuvem tem então causado um grande impacto na área de TI, pois visando na otimização e redução de custos e riscos respectivamente, passou-se a pensar em um ambiente onde as empresas sejam ''\textit{datacenter-less}'', ou seja, não tenham \textit{datacenters} fisícos, e sim utilizem de empresas que forneçam esses produtos e serviços envolvendo tecnologia da informação por meio de nuvem, sem que as primeiras tenham que lidar com os custos associados a administração e operação dos \textit{datacenters}~\cite{armbrust2010}, e com isso focando somente na prestação de seu serviço ou desenvolvimento de seu produto.
 
-Outros aspectos também têm contribuído para a adoção da Computação em Nuvem e sua popularização enquanto paradigma computacional. É possível destacar pelo menos dois aspectos principais: \textbf{(i)} aumento na capacidade de processamento e armazenamento de \textit{hardware}, bem como sua a rápida diminuição do custo, incentivando sua adoção massiva na construção de \textit{datacenters}; \textbf{(ii)} a adoção generalizada de serviços de computação e aplicações da \textit{Web}, provocando crescimento exponencial da quantidade de dados disponíveis, especialmente os relacionados com o conteúdo da \textit{Internet}, envolvendo redes sociais, comércio eletrônico, computação móvel~\citet{armbrust2010,fox2009,4738445}.
+Outros aspectos também têm contribuído para a adoção da Computação em Nuvem e sua popularização enquanto paradigma computacional. É possível destacar pelo menos dois aspectos principais: \textbf{(i)} aumento na capacidade de processamento e armazenamento de \textit{hardware}, bem como sua a rápida diminuição do custo, incentivando sua adoção massiva na construção de \textit{datacenters}; \textbf{(ii)} a adoção generalizada de serviços de computação e aplicações da \textit{Web}, provocando crescimento exponencial da quantidade de dados disponíveis, especialmente os relacionados com o conteúdo da \textit{Internet}, envolvendo redes sociais, comércio eletrônico, computação móvel~\cite{armbrust2010,fox2009,4738445}.
 \section{Caracteristícas}
 
-De uma forma geral, podemos imaginar a Computação em Nuvem como uma forma de sistema paralelo e distribuído, que consiste em um conjunto de computadores interligados e virtualizados, que, dinamicamente, são provisionados e apresentados como um ou mais recursos de computação unificada. O acesso e utilização desses recursossão regidos através do \textit{Services Level Agreements} (SLA), ou Acordos de Nível de Serviço, estabelecidos através de negociação entre o prestador de serviço e os consumidores, e que determinam o nível de qualidade aceitável para um serviço disponivilizado pela Computação em Nuvem \citet{Buyya}.
+De uma forma geral, podemos imaginar a Computação em Nuvem como uma forma de sistema paralelo e distribuído, que consiste em um conjunto de computadores interligados e virtualizados, que, dinamicamente, são provisionados e apresentados como um ou mais recursos de computação unificada. O acesso e utilização desses recursossão regidos através do \textit{Services Level Agreements} (SLA), ou Acordos de Nível de Serviço, estabelecidos através de negociação entre o prestador de serviço e os consumidores, e que determinam o nível de qualidade aceitável para um serviço disponivilizado pela Computação em Nuvem \cite{Buyya}.
 
 \subsection{Caracteristícas Essenciais}\label{caracessencial}
-No entanto a Computação em Nuvem possui algumas características essencias que a definem e fazem um modelo distinto de outros paradigmas. De acordo com Mell \citet{mell2011nist}, existem cinco características essencias que distinguem a Computação em Nuvem.
+No entanto a Computação em Nuvem possui algumas características essencias que a definem e fazem um modelo distinto de outros paradigmas. De acordo com Mell \cite{mell2011nist}, existem cinco características essencias que distinguem a Computação em Nuvem.
 
 \subsubsection{\textit{Self-Service} sob demanda}
 O usuário pode adquirir unilateralmente recurso computacional, como tempo de processamento no servidor ou armazenamento na rede na medida em que necessite e sem precisar
@@ -202,7 +183,7 @@ possibilitando transparência para o provedor e o usuário do serviço utilizado. P
 faturamento e até mesmo penalidades em caso de violação destes níveis.
 
 \subsection{Virtualização}\label{virtualization}
-Outra caracteristíca importante para o paradigma de Computação em Nuvem é o uso da a virtualização, pois ela oferece a abstração necessária para que os recursos computacionais físicos (processamento, armazenamento, recursos de rede) possam ser unificados como um conjunto de recursos mais abstratos, permitindo que outros serviços possam ser construídos sobre estes \citet{4738445}. Através dela é possivel compartilhar a mesma máquina física com múltiplos sistemas operacionais e/ou aplicações de usuários finais, mantendo garantias ao desempenho \citet{5557989} e isolamento entre as mesmas. Tal propriedade garante certo nível de encapsulamento e flexibilidade que permite que tais máquinas possam ser manipuladas e tenham suas aplicações migradas entre servidores com maior facilidade do que se isto ocorresse usando-se somente máquinas físicas, garantindo assim melhor segurança, gerenciamento e isolamento.
+Outra caracteristíca importante para o paradigma de Computação em Nuvem é o uso da a virtualização, pois ela oferece a abstração necessária para que os recursos computacionais físicos (processamento, armazenamento, recursos de rede) possam ser unificados como um conjunto de recursos mais abstratos, permitindo que outros serviços possam ser construídos sobre estes \cite{4738445}. Através dela é possivel compartilhar a mesma máquina física com múltiplos sistemas operacionais e/ou aplicações de usuários finais, mantendo garantias ao desempenho \cite{5557989} e isolamento entre as mesmas. Tal propriedade garante certo nível de encapsulamento e flexibilidade que permite que tais máquinas possam ser manipuladas e tenham suas aplicações migradas entre servidores com maior facilidade do que se isto ocorresse usando-se somente máquinas físicas, garantindo assim melhor segurança, gerenciamento e isolamento.
 Na Figura \ref{virtualImage} vemos a diferença entre uma máquina física e o funcionamento de um ambiente virtualizado, onde a camada inferior representa a camada física, a camada intermediária representa o sistema operacional que é executado no servidor físico e o \textit{software} de virtualização ou \textit{Virtual Machine Monitor} VMM, responsável por gerenciar o acesso ao \textit{hardware} subjacente e gerenciar e dar suporte a próxima camada, que representa as máquinas virtuais de fato, onde cada máquina virtual possui um sistema operacional independente e executa suas próprias aplicações.
 
 
@@ -216,7 +197,7 @@ Na Figura \ref{virtualImage} vemos a diferença entre uma máquina física e o func
    
 \subsection{Modelos de Implantação}\label{implantationmodel}
 Tratando-se do acesso e disponibilidade de ambientes de computação em nuvem, tem-se diferentes tipos de modelos de implantação. A restrição ou abertura de acesso depende do processo de negócios, do tipo de informação e do nível de visão desejado. Pode-se perceber que certas empresas não desejamque todos os usuários possam acessar e utilizar determinados recursos no seu ambiente de computação em nuvem. Assim sendo, pensa-se então em criar ambientes mais restritor, onde somente usuários devidamente autorizados possam utilizar os serviços providos.
-Os modelos de implantação da Computação em Nuvem podem ser: Público, Privado, Híbrido e Comunitário \citet{nist2009}.
+Os modelos de implantação da Computação em Nuvem podem ser: Público, Privado, Híbrido e Comunitário \cite{nist2009}.
 A Figura \ref{implantationmodelImage} mostra os respectivos modelos de implantação de nuvens.
   \begin{itemize}
    \item 
@@ -281,7 +262,7 @@ Outra das características do paradigma de Computação em Nuvem, é os serviços dis
    Por ser um modelo que utiliza da \textit{internet} para disponibilizar seus serviços, segurança torna-se então um aspecto de fundamental importância e deve-se ter formas de impedir o acesso não autorizado a informações e garantir que os dados sensíveis permaneçam privados, pois estes serão processados fora da empresa. Questões de segurança devem ser consideradas para prover a autenticidade, confidenciabilidade e integridade. No que diz respeito à confidenciabilidade e responsabilidade, o provedor deve fornecer recursos confiáveis, especialmente se a computação a ser realizada é crítica e existindo uma clara delimitação de responsabilidade.
    
    \subsection{Gerenciamento de Dados}
-   O gerenciamento de dados é considerado um ponto crítico no contexto de computação em nuvem. Os SGBDs (Sistema gerenciador de banco de dados) relacionais não possuem escalabilidade quando milhares de sítios são considerados \citet{Wei2009}. Assim, aspectos de armazenamento de dados, processamento de consultas e controle transacional têm sido flexibilizados por algumas abordagens para garantir a escalabilidade, mas ainda não existem soluções que combinem estes aspectos de forma a melhorar o desempenho sem comprometer a consistência dos dados. Um aspecto importante é o \textit{trade-off} entre funcionalidades e custos operacionais enfrentados pelos provedores de serviços. Os serviços em nuvem para dados oferecem APIs \textit{Application Programming Interface} ou Interface de Programação de Aplicações mais restritas que os SGBDs relacionais, com uma linguagem minimalista de consulta e garantia de consistência limitada. Porém isso exige esforço de programação dos desenvolvedores, mas permite aos provedores construírem serviços mais previsíveis e oferecerem SLA. De acordo com Armbrust \citet{armbrust2010}, a criação de um sistema de armazenamento que combine com diversos aspectos de computação em nuvem, de forma a aumentar a escalabilidade, disponibilidade e consistência dos dados é um problema de pesquisa em aberto.
+   O gerenciamento de dados é considerado um ponto crítico no contexto de computação em nuvem. Os SGBDs (Sistema gerenciador de banco de dados) relacionais não possuem escalabilidade quando milhares de sítios são considerados \cite{Wei2009}. Assim, aspectos de armazenamento de dados, processamento de consultas e controle transacional têm sido flexibilizados por algumas abordagens para garantir a escalabilidade, mas ainda não existem soluções que combinem estes aspectos de forma a melhorar o desempenho sem comprometer a consistência dos dados. Um aspecto importante é o \textit{trade-off} entre funcionalidades e custos operacionais enfrentados pelos provedores de serviços. Os serviços em nuvem para dados oferecem APIs \textit{Application Programming Interface} ou Interface de Programação de Aplicações mais restritas que os SGBDs relacionais, com uma linguagem minimalista de consulta e garantia de consistência limitada. Porém isso exige esforço de programação dos desenvolvedores, mas permite aos provedores construírem serviços mais previsíveis e oferecerem SLA. De acordo com Armbrust \cite{armbrust2010}, a criação de um sistema de armazenamento que combine com diversos aspectos de computação em nuvem, de forma a aumentar a escalabilidade, disponibilidade e consistência dos dados é um problema de pesquisa em aberto.
    
    \subsection{Autonomia}
    Na computação em nuvem, vários modelos evoluíram rapidamente para aproveitar as tecnologias de \textit{software}, plataformas de programação, armazenamento de dados e infraestrutura de \textit{hardware} como serviços. Enquanto estes modelos se referem ao núcleo dos serviços de computação em nuvem, suas inter-relações têm sido ambíguas e a viabilidade de sua interoperabilidade é questionável. Além disso, cada serviço da nuvem tem interfaces e protocolos diferentes. Como os diversos serviços estão dispersos no ambiente e possuem caracteristícas distintas, desenvolver técnicas eficazes e eficientes para descrever, descobri e compor estes serviços torna-se um desafio interessante.
@@ -307,20 +288,22 @@ Outra das características do paradigma de Computação em Nuvem, é os serviços dis
    A nuvem serve basicamente para prover serviços computacionais para usuários finais em um amiente remoto, onde o \textit{software} atual executa como um serviço em servidores confiáveis e escalonáveis ao invés de executar no computador de cada usuário. Basicamente \textit{OpenStack} provê IaaS, o que significa que ele provê infraestrutura como serviço, o que significa que ele faz ser fácil para o usuário adicionar rapidamente uma nova instância da nuvem sobre qual os outros componentes da nuvem podem rodar. Tipicamente a infraestrutura executa uma plataforma sobre qual o desenvolvedor pode criar aplicações, as quais são entregadas para o usuário final.
    
    % http://opensource.com/resources/what-is-openstack
+   \subsection{Componentes do \textit{OpenStack}}
+   O \textit{OpenStack} é feito de diferentes partes móveis. Por causa de sua natureza ''livre'', qualquer um pode adicionar componentes a ele para ajudar a satisfazer suas necessidades. Mas a comunidade do \textit{OpenStack} tem colaborativamente identificado componentes chave que são parte de um núcleo da ferramenta, as quais são distribuidas como uma parte de qualquer sistema \textit{OpenStack} e oficialmente mantido por sua comunidade.
+   Esses componentes são:
    
+   \begin{itemize}
    
-  % \subsection{\textit{Openstack Compute}:} o Sistema Operacional em Nuvem \textit{Openstack} permite às empresas e aos prestadores de serviço oferecer recursos computacionais sob demanda graças ao provisionamento e gerenciamento de grandes redes de máquinas virtuais. Estes recursos são acessíveis através de APIs para desenvolvedores de aplicativos em nuvem e por meio de interfaces \textit{web} para administradores e usuários.
+    \item \textit{Openstack Compute}: o Sistema Operacional em Nuvem \textit{Openstack} permite às empresas e aos prestadores de serviço oferecer recursos computacionais sob demanda graças ao provisionamento e gerenciamento de grandes redes de máquinas virtuais. Estes recursos são acessíveis através de APIs para desenvolvedores de aplicativos em nuvem e por meio de interfaces \textit{web} para administradores e usuários.
+    
+    \item \textit{Openstack Storage}:
+    Além da tecnologia tradicional de armazenamento de classe empresarial , muitas organizações têm agora uma variedade de necessidades de armazenamento com diferentes requisitos de desempenho e preço. OpenStack tem base para \textit{Object Storage} e \textit{Block Storage}, com muitas opções de implantação para cada, dependendo do caso de uso.
+    O primeiro é ideal para o armazenamento de baixo custo, \textit{scale-out}. Ele fornece uma plataforma de armazenamento acessível, totalmente distribuída, que pode ser integrado diretamente em aplicativos ou utilizados para \textit{backup}, arquivamento e retenção de dados. Já \textit{Block Storage} permite que os dispositivos de bloco sejam expostos e conectados para calcular instâncias de armazenamento expandido, melhor desempenho e integração com plataformas de armazenamento corporativo , tais como \textit{NetApp} , \textit{Nexenta} e \textit{SolidFire}.
 
-  %\textbf{Arquitetura Flexível:} \textit{Openstack} é projetado para oferecer flexibilidade conforme você utiliza sua nuvem, com \textit{hardware} e requisitos de \textit{software} livres, ou seja, não proprietários e a habilidade de conectar com sistemas legados e de tecnologias de terceiros. É projetado para suportar, e além disso, gerenciar e automatizar cargas de computação e pode operar com uma larga gama de tecnologias de virtualização disponíveis.
+    \item \textit{Openstack Networking}: As redes de \textit{datacenters} atuais contém mais dispositivos conectados do que mesmo servidores, equipamento de redes, sistemas de armazenamento e aplicações de segurança -- muitos dos quais são comumente divididos em máquinas e redes virtuais. O número de endereços IPs, configurações de rotas e até mesmo regras de segurança podem crescer até a casa dos milhões facilmente. Técnicas tradicionais de gerenciamento de redes falham rapidamente ao tentar prover uma verdadeira escalabilidade a um sistema desse porte. Ao mesmo tempo, os clientes esperam maior facilidade de acesso e mais velocidade e garantia de qualidade.
+    \textit{Openstack Networking} é um sistema escalonável e plugável, orientado a API, para gerenciamento de redes e endereços IPs. Como outros aspectos de um sistema operacional em nuvem ele pode ser usado para aumentar o valor de \textit{datacenters} ativos.
 
-   %\subsection{\textit{Openstack Storage}:}
-   %Além da tecnologia tradicional de armazenamento de classe empresarial , muitas organizações têm agora uma variedade de necessidades de armazenamento com diferentes requisitos de desempenho e preço. OpenStack tem base para \textit{Object Storage} e \textit{Block Storage}, com muitas opções de implantação para cada, dependendo do caso de uso.
-
-  %O primeiro é ideal para o armazenamento de baixo custo, \textit{scale-out}. Ele fornece uma plataforma de armazenamento acessível, totalmente distribuída, que pode ser integrado diretamente em aplicativos ou utilizados para \textit{backup}, arquivamento e retenção de dados. Já \textit{Block Storage} permite que os dispositivos de bloco sejam expostos e conectados para calcular instâncias de armazenamento expandido, melhor desempenho e integração com plataformas de armazenamento corporativo , tais como \textit{NetApp} , \textit{Nexenta} e \textit{SolidFire}.
-
-  %\subsection{\textit{Openstack Networking}:} As redes de \textit{datacenters} atuais contém mais dispositivos conectados do que mesmo servidores, equipamento de redes, sistemas de armazenamento e aplicações de segurança -- muitos dos quais são comumente divididos em máquinas e redes virtuais. O número de endereços IPs, configurações de rotas e até mesmo regras de segurança podem crescer até a casa dos milhões facilmente. Técnicas tradicionais de gerenciamento de redes falham rapidamente ao tentar prover uma verdadeira escalabilidade a um sistema desse porte. Ao mesmo tempo, os clientes esperam maior facilidade de acesso e mais velocidade e garantia de qualidade.
-  %\textit{Openstack Networking} é um sistema escalonável e plugável, orientado a API, para gerenciamento de redes e endereços IPs. Como outros aspectos de um sistema operacional em nuvem ele pode ser usado para aumentar o valor de \textit{datacenters} ativos.
-
+   \end{itemize}
 
    \section{Considerações Sobre o Capítulo}
    
@@ -328,7 +311,7 @@ Outra das características do paradigma de Computação em Nuvem, é os serviços dis
    Ainda também é feita uma introdução ao \textit{OpenStack}, que será a ferramenta utilizada para desenvolvimento do ambiente em Nuvem e realização dos testes.
    No capítulo a seguir, veremos alguns fundamentos e conceitos de Lógica \textit{Fuzzy}, e como essa técnica pode ser útil e relevanta na recente pesquisa, bem como alguns trabalhos relacionados onde a lógica \textit{fuzzy} é utilizada para técnicas semelenhas as que serão utilizadas ao longo desse projeto.
    
-\chapter{Logica \textit{Fuzzy}}
+\chapter{Logica \textit{Fuzzy}}\label{fuzzy}
 Nesse capítulo serão abordados os principais fundamentos sobre Lógica \textit{Fuzzy}, LF. Após mostrar alguns conceitos sobre o assunto, procura-se fazer uma relação com o tema da pesquisa, mostrando assim que essa técnica pode dar um suporte melhor na tomada de decisões para um gerenciamento e uma otimização melhores dos recursos utilizados pela unidade física da Nuvem.
 \section{Fundamentos}
   A lógica binária é a base de todo e qualquer cálculo computacional, sendo essas operações básicas que constituem todo o poderio dos computadores da atualidade. Qualquer operação, por mais complexa que pareça é traduzida internamente pelo processador para estas operações. Esta lógica trabalha simplesmente com verdadeiro e falso, porém nem tudo na computação se resolve de forma ótima, ou mesmo satisfatória simplesmente com verdadeiro ou falso. Assim sendo então, pensou-se em uma forma de trabalhar com a lógica, não de forma binária, mas de forma com que exista níveis de certeza para cada sentença, passando assim a ter um grau de pertinência, e assim nasceu a Lógica \textit{Fuzzy}.
@@ -338,17 +321,17 @@ Nesse capítulo serão abordados os principais fundamentos sobre Lógica \textit{Fu
   Após essa conquista, surgiu então um novo campo para a Computação, a Lógica \textit{Fuzzy}. Seus sistemas foram amplamentes utilizados para muitas aplicações, como no controle de operações de un forno de cimento, controladores de plantas nucleares, refinarias, processos biológicos e quimícos, controladores de temperatura, máquina diesel, tratamento de água e sistema de operação automática de trens.
   
   \subsection{Características}
-  A lógica \textit{fuzzy} é a lógica baseada na teoria dos conjuntos \textit{fuzzy}. Ela difere dos sistemas lógicos tradicionais em suas características e seus detalhes. Nesta lógica, o raciocínio exato corresponde a um caso limite do raciocínio aproximado, sendo interpretado como um processo de composição de relações nebulosas. Na lógica \textit{fuzzy}, o valor verdade de uma proposição pode ser um subconjunto \textit{fuzzy} de qualquer conjunto parcialmente ordenado, ao contrário dos sistemas lógicos binários, onde o valor verdade só pode assumir dois valores: verdadeiro (1) ou falso (0). Nos sistemas lógicos multi-valores, o valor verdade de uma proposição pode ser ou um elemento de um conjunto finito, num intervalo, ou uma álgebra booleana. Na lógica nebulosa, os valores verdade são expressos linguisticamente, (e.g. : verdade, muito verdade, não verdade, falso, muito falso, ...), onde cada termo linguístico é interpretado como um subconjunto \textit{fuzzy} do intervalo unitário. Outra diferença é que nos sistemas lógicos binários, os predicados são exatos (e.g. : par, maior que), ao passo que na lógica \textit{fuzzy} os predicados são nebulosos (e.g. : alto, baixo, ...). Nos sistemas lógicos clássicos, o modificador mais utilizado é a negação enquanto que na lógica \textit{fuzzy} uma variedade de modificadores de predicados são possíveis (e.g. : muito, mais ou menos, ...). Estes modificadores são essenciais na geração de termos linguísticos (e.g. : 
-muito alto, mais ou menos perto, etc). Nos sistemas lógicos clássicos existem somente os quantificadores existenciais ($\exists$) e universais ($\forall$). A lógica \textit{fuzzy} admite, em adição, uma ampla variedade de quantificadores (e.g. : pouco, vários, usualmente, frequentemente, em torno de cinco, etc ). A probabilidade, no contexto da lógica clássica, é um valor numérico ou um intervalo. Na lógica nebulosa existe a opção adicional de se empregar probabilidades linguísticas (e.g. : provável, altamente provável, improvável, etc), interpretados como números \textit{fuzzy} e manipuladas pela aritmética \textit{fuzzy} \cite{kaufmann1985zntroductlon}. Também, em contraste com a lógica modal clássica, o conceito de possibilidade é interpretado utilizando-se subconjuntos \textit{fuzzy} nouniverso dos reais \cite{zadeh1988fuzzy}. Nas teorias de controle clássica e moderna, o primeiro passo para implementar o controle de um processo, é derivar o modelo matemático que descreve o processo. O procedimento, requer que se conheça detalhadamente o processo a ser controlado, o que nem sempre é factível se o processo é muito complicado. As teorias de controle existentes se aplicam a uma grande variedade de sistemas, onde o processo é bem definido. Várias técnicas, tais como para controle linear multivariável, estimação de estado a partir de medidas ruidosas, controle ótimo, sistemas lineares estocásticos, além de certas classes de problemas não-lineares determinísticos \citet{holtzman1970nonlinear}, foram desenvolvidas e aplicadas com sucesso em um grande número de problemas bem postulados. Entretanto,  todas estas técnicas não são capazes de resolver problemas reais cuja modelagem matemática é impraticável. Por exemplo, em diversas situações um volume considerável de informações essenciais só é conhecido a priori de forma qualitativa. Do mesmo modo, critérios de desempenho só estão disponíveis em termos linguísticos.  Este panorama leva a imprecisões e falta de exatidão que inviabilizam a maioria das teorias utilizadas até agora. 
+  A lógica \textit{fuzzy} é a lógica baseada na teoria dos conjuntos \textit{fuzzy}. Ela difere dos sistemas lógicos tradicionais em suas características e seus detalhes. Nesta lógica, o raciocínio exato corresponde a um caso limite do raciocínio aproximado, sendo interpretado como um processo de composição de relações nebulosas. Na lógica \textit{fuzzy}, o valor verdade de uma proposição pode ser um subconjunto \textit{fuzzy} de qualquer conjunto parcialmente ordenado, ao contrário dos sistemas lógicos binários, onde o valor verdade só pode assumir dois valores: verdadeiro (1) ou falso (0). Nos sistemas lógicos multi-valores, o valor verdade de uma proposição pode ser ou um elemento de um conjunto finito, num intervalo, ou uma álgebra booleana. Na lógica nebulosa, os valores verdade são expressos linguisticamente, (e.g. : verdade, muito verdade, não verdade, falso, muito falso, ...), onde cada termo linguístico é interpretado como um subconjunto \textit{fuzzy} do intervalo unitário. Outra diferença é que nos sistemas lógicos binários, os predicados são exatos (e.g. : par, maior que), ao passo que na lógica \textit{fuzzy} os predicados são nebulosos (e.g. : alto, baixo, ...). Nos sistemas lógicos clássicos, o modificador mais utilizado é a negação enquanto que na lógica \textit{fuzzy} uma variedade de modificadores de predicados são possíveis (e.g. : muito, mais ou menos, ...). Estes modificadores são essenciais na 	geração de termos linguísticos (e.g. : 
+  muito alto, mais ou menos perto, etc). Nos sistemas lógicos clássicos existem somente os quantificadores existenciais ($\exists$) e universais ($\forall$). A lógica \textit{fuzzy} admite, em adição, uma ampla variedade de quantificadores (e.g. : pouco, vários, usualmente, frequentemente, em torno de cinco, etc ). A probabilidade, no contexto da lógica clássica, é um valor numérico ou um intervalo. Na lógica nebulosa existe a opção adicional de se empregar probabilidades linguísticas (e.g. : provável, altamente provável, improvável, etc), interpretados como números \textit{fuzzy} e manipuladas pela aritmética \textit{fuzzy} \cite{kaufmann1985zntroductlon}. Também, em contraste com a lógica modal clássica, o conceito de possibilidade é interpretado utilizando-se subconjuntos \textit{fuzzy} nouniverso dos reais \cite{zadeh1988fuzzy}. Nas teorias de controle clássica e moderna, o primeiro passo para implementar o controle de um processo, é derivar o modelo matemático que descreve o processo. O procedimento, requer que se conheça detalhadamente o processo a ser controlado, o que nem sempre é factível se o processo é muito complicado. As teorias de controle existentes se aplicam a uma grande variedade de sistemas, onde o processo é bem definido. Várias técnicas, tais como para controle linear multivariável, estimação de estado a partir de medidas ruidosas, controle ótimo, sistemas lineares estocásticos, além de certas classes de problemas não-lineares determinísticos \cite{holtzman1970nonlinear}, foram desenvolvidas e aplicadas com sucesso em um grande número de problemas bem postulados. Entretanto,  todas estas técnicas não são capazes de resolver problemas reais cuja modelagem matemática é impraticável. Por exemplo, em diversas situações um volume considerável de informações essenciais só é conhecido a priori de forma qualitativa. Do mesmo modo, critérios de desempenho só estão disponíveis em termos linguísticos.  Este panorama leva a imprecisões e falta de exatidão que inviabilizam a maioria das teorias utilizadas até agora. 
 
-A modelagem e o controle \textit{fuzzy} \cite{lee1990fuzzy} são técnicas para se manusear informações qualitativas de uma maneira rigorosa. Tais técnicas consideram o modo como a falta de exatidão e a incerteza são descritas e, fazendo isso, tornam-se suficientemente poderosas para manipular de maneira conveniente o conhecimento. A sua utilização em sistemas de controle de processos em tempo real, em computadores ou micro-controladores, é das mais convenientes, dado que, geralmente, não envolvem nenhum problema computacional sério. A teoria de modelagem e controle \textit{fuzzy} trata do relacionamento entre entradas e saídas, agregando vários parâmetros de processo e de controle. Isso permite a consideração de processos complexos, de modo que os 
-sistemas de controle resultantes proporcionam um resultado mais acurado, além de um desempenho estável e robusto. A grande simplicidade de implementação de sistemas de controle \textit{fuzzy} pode reduzir a complexidade de um projeto a um ponto em que problemas anteriormente intratáveis passam agora a ser solúveis. 
+  A modelagem e o controle \textit{fuzzy} \cite{lee1990fuzzy} são técnicas para se manusear informações qualitativas de uma maneira rigorosa. Tais técnicas consideram o modo como a falta de exatidão e a incerteza são descritas e, fazendo isso, tornam-se suficientemente poderosas para manipular de maneira conveniente o conhecimento. A sua utilização em sistemas de controle de processos em tempo real, em computadores ou micro-controladores, é das mais convenientes, dado que, geralmente, não envolvem nenhum problema computacional sério. A teoria de modelagem e controle \textit{fuzzy} trata do relacionamento entre entradas e saídas, agregando vários parâmetros de processo e de controle. Isso permite a consideração de processos complexos, de modo que os 
+  sistemas de controle resultantes proporcionam um resultado mais acurado, além de um desempenho estável e robusto. A grande simplicidade de implementação de sistemas de controle \textit{fuzzy} pode reduzir a complexidade de um projeto a um ponto em que problemas anteriormente intratáveis passam agora a ser solúveis. 
 
 \subsection{Sistema \textit{Fuzzy}}
 
 Nessa sessão será falado sobre um sistema \textit{fuzzy}, e após sobre um possível sistema para o problema
-\chapter{Trabalhos Relacionados}
-\chapter{Metologia}
+\chapter{Trabalhos Relacionados}\label{works}
+\chapter{Metologia}\label{metodology}
 
 \section{Outra seção}
 
