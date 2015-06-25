@@ -280,6 +280,7 @@ Outra das características do paradigma de Computação em Nuvem, é os serviços dis
       \label{openstack}
     \end{center}
    \end{figure}
+   
    \subsection{Introduzindo o \textit{OpenStack}}
     
    O \textit{OpenStack} permite a seus usuários desenvolver máquinas virtuais e outras instancias que operam diferentes tarefas para gerenciar um ambiente em nuvem. Ele faz com que escalonamento horizantal se torne mais fácil de ser feito, o que significa que tarefas que se benificiam de serem executadas de forma concorrente possam servir de forma mais fácil mais ou menos usuários na nuvem somente subindo mais instancias. (e.g : uma aplicação móvel que precisa se comunicar com um servidor remoto pode ter como dividir o trabalho de comunicação com cada usuário de através de muitas instancias diferentes, todos se comunicando entre si, mas escalonando rapidamente e facilmente conforme a aplicação ganha mais usuários.)
@@ -329,20 +330,46 @@ Nesse capítulo serão abordados os principais fundamentos sobre Lógica \textit{Fu
 
 \subsection{Sistema \textit{Fuzzy}}
 
-Nessa sessão será falado sobre um sistema \textit{fuzzy}, e após sobre um possível sistema para o problema
+''Conforme a complexidade de um sistema aumenta, a nossa habilidade de fazer declarações precisas e significativas sobre o seu comportamento diminui, até alcançar um limite além do qual precisão e relevância tornam-se características mutuamente exclusivas.''
+
+Conforme estudado por \citet{zadeh1988fuzzy}, a transcrição a cima, é definida como o Princípio da Incompatibilidade, e mostra a relevância em utilizar a Lógica \textit{Fuzzy} para auxiliar na resolução de problemas que tradicionalmente são difíceis de resolver. A ideia básica de um sistema desses é a existência do que é chamado de Conjuntos \textit{Fuzzy}. Esses conjuntos são funções que mapeaiam um valor escalar em um número limitado entre 0 e 1, que indica o grau de pertinência desse valor ao conjunto.
+
+Um sistema assim pode estimar funções de entrada e saída, por meio do uso de técnicas heurísticas, onde um especialista humando, entrevistado para ajudar a formular o conjunto de regras, pode articular associações de entrada/saída linguísticas. Assim pode-se produzir estimativasde um sistema complexo sem recorrer a modelos mtemáticos. Nesse escopo, a metodologia \textit{fuzzy} é um método de estimação de entrada e saída que considera modelos matemáticos \cite{shaw1999controle}.
+
+Um Sistema de Inferência considera os seguintes blocos principais, conforme mostrado na Figura \ref{fuzzySystem} \cite{samuca}.
+\begin{itemize}
+ \item  \textbf{Base de Regras}, contendo um conjnto de regras/proposições onde as variáveis antecedentes/consequentes são variáveis linguísticas e os possíveis valores de uma varável linguística sãorepresentados por um conjunto \textit{fuzzy}. 
+ 
+ \item \textbf{Base de dados}, que define as funções de pertinência do conjunto nas regras \textit{fuzzy}.
+ 
+ \item \textbf{Unidade de Decisão Lógica}, realizando operações de inferência, para obter, a partir da avaliação dos níveis de compatibilidade das entradas, com as condições impostas pela base de regras, uma ação a ser realizada pelo sistema.
+ 
+ \item \textbf{Interface de Fuzzificação}, utilizando as funções de pertinência pré-estabelecidas para mapear cada variável de entrada do sistema em graus de pertinência de algum conjunto \textit{fuzzy} que representa a variável em questão
+ 
+ \item \textbf{Interface de Desfuzzificação}, que transforma os resultados \textit{fuzzy} da inferência em valores de saída calculados com base na inferência obtida no módulo Unidade de Decisão Lógica, com as funções de pertinência das variáveis linguísticas da parte consequente das regras para obter uma saída não \textit{fuzzy}. Nesta etapa as regiões resultantes são convertidas em valores de saída do sistema.
+ 
+\end{itemize}
+
+ \begin{figure}[!htb]
+    \begin{center}
+      \includegraphics[scale=.60]{imagens/fuzzySystem.png}
+      \caption{Sistema Fuzzy} 
+      \label{fuzzySystem}
+    \end{center}
+   \end{figure}
+
+\section{Realizações Futuras}
+Após ter abordado então sobre as características e técnicas da lógica \textit{fuzzy}, fica então a seguir definir o sistema \textit{fuzzy} que realizará o sensoreamento, tendo como entrada a quantidade de processador utilizado, a utilização da memória RAM, a utilização do disco rígido e o consumo de energia da estação relacionado com os anteriores.
+
+Através dessa entrada, busca-se definir um sistema que apoiará na tomada de decisão no gerenciamento de instâncias físicas do ambiente. Com essas entradas, podemos então realizar as etapas vistas na sessão anterior, e realizar um sistema \textit{fuzzy} utilizando de fato como suporte e recebendo saídas, as quais serão analisadas e apresentadas, possibilitando um aprofundamento para possíveis trabalhos futuros.
+
+\section{Considerações Sobre o Capítulo}
+Nesse capítulo foi abordado sobre os conceitos de Lógica \textit{Fuzzy} e suas caracteristicas, bem como foi falado sobre um sistema \textit{fuzzy} em geral e como essa técnica pode ser útil na realização desse trabalho.
+
+Demonstrou-se também como pretende-se utilizar essa técnica na realização desse trabalho para uma pesquisa a seguir, e quais as entradas definidas para o sistema.
+No próximo capítulo será abordado sobre trabalhos relacionados, e quais as dificuldades desse trabalho.
+
 \chapter{Trabalhos Relacionados}\label{works}
-\chapter{Metologia}\label{metodology}
-
-\section{Outra seção}
-
-  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla
-  bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
-  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla
-  blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
-  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla
-  bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
-  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla
-  blabla blablabla bla.  Bla blabla blablabla bla~\ref{tabela}.
 
 \begin{table}
 \begin{center}
@@ -379,64 +406,6 @@ teste & teste1 & teste2\\
   blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla
   blabla blablabla bla.  Bla blabla blablabla bla.
 
-\chapter{Desenvolvimento}
-
-  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
-  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
-  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
-  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
-  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
-  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
-  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
-  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
-  Bla blabla blablabla bla~\ref{tabela2}.
-
-\begin{table}
-\begin{center}
-\caption{Nome da Tabela}\label{tabela2}
-\begin{tabular}{p{4cm}p{5cm}p{6cm}}
-\hline
-Blabla & Blabla & Blablabla\\
-\hline
-{\small Bla} & {\small Blabla} & {\small\em Bla blabla blablabla blabla
-  blablabla blabla blablabla.}\\
-{\small Bla} & {\small Blabla} & {\small\em Bla blabla blablabla blabla
-  blablabla blabla blablabla.}\\
-{\small Bla} & {\small Blabla} & {\small\em Bla blabla blablabla blabla
-  blablabla blabla blablabla.}\\
-{\small Bla} & {\small Blabla} & {\small\em Bla blabla blablabla blabla
-  blablabla blabla blablabla.}\\
-{\small Bla} & {\small Blabla} & {\small\em Bla blabla blablabla blabla
-  blablabla blabla blablabla.}\\
-{\small Bla} & {\small Blabla} & {\small\em Bla blabla blablabla blabla
-  blablabla blabla blablabla. Conforme a figura~\ref{figura}}\\
-\hline
-\end{tabular}
-\end{center}
-\end{table}
-
-
-
-
-\chapter{Conclusão}
-
-  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla
-  bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
-  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla
-  blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
-  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla
-  bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
-  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla
-  blabla blablabla bla.  Bla blabla blablabla bla.
-
-  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla
-  bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
-  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla
-  blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.
-  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla
-  bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla blabla
-  blablabla bla.  Bla blabla blablabla bla.  Bla blabla blablabla bla.  Bla
-  blabla blablabla bla.  Bla blabla blablabla bla.
 
 % Bibliografia
 % http://liinwww.ira.uka.de/bibliography/index.html
