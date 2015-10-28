@@ -1,0 +1,45 @@
+FUNCTION_BLOCK Analyse_computational_resources
+
+
+ 
+    VAR_INPUT
+        Memory:    REAL; (* RANGE(0 .. 100) *)
+        CPU:    REAL; (* RANGE(0 .. 100) *)
+    END_VAR
+ 
+    VAR_OUTPUT
+        Output : REAL; (* RANGE(0 .. 4) *)
+    END_VAR
+ 
+    FUZZIFY Memory
+        TERM Underload := (0, 1) (20, 1) (30, 0) ;
+        TERM Good := (30, 1) (60, 1) (70, 0) ;
+        TERM Overload := (70, 0) (80, 1) (100, 1) ;
+    END_FUZZIFY
+ 
+    FUZZIFY CPU
+        TERM Underload := (0, 1) (20, 1) (30,0) ;
+        TERM Good := (30, 1) (60, 1) (70, 0) ;
+        TERM Overload := (70, 0) (80, 1) (100, 1) ;
+    END_FUZZIFY
+ 
+    DEFUZZIFY Output
+        TERM Realocate := 1 ; (*When this node is undercharged , relocates to another node and disable this one*)
+        TERM Distribuition := 2 ; (*When this node is overcharged, distributes his tasks to anothers nodes*)
+        TERM Ok := 3; (*When it is ok, do nothing*)
+        ACCU:MAX;
+        METHOD: COGS;(*MoM;*)
+        DEFAULT := 0; 
+    END_DEFUZZIFY
+ 
+    RULEBLOCK first
+        AND:MIN;
+        (*ACCU:MAX;*)
+        RULE 0: IF (Memory IS Good) AND (CPU IS Good) THEN (Output IS Ok);
+        RULE 1: IF (Memory IS Underload) AND (CPU IS Good) THEN (Output IS Ok);
+        RULE 2: IF (Memory IS Overload) AND (CPU IS Good) THEN (Output IS Distribuition);
+        RULE 3: IF (Memory IS Good) AND (CPU IS Underload) THEN (Output IS Realocate);
+        RULE 4: IF (Memory IS Good) AND (CPU IS Overload) THEN (Output IS Distribuition);
+    END_RULEBLOCK
+ 
+END_FUNCTION_BLOCK
