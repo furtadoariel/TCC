@@ -1,30 +1,27 @@
 #!/usr/bin/env python
 import sys,os
-sys.path.insert(0, os.path.join(os.path.abspath(os.path.dirname(sys.argv[0])),os.path.pardir))
 
 try:
     import StringIO
 except:
     import io as StringIO
-try:
-    import fuzzy.OutputVariable
-    import fuzzy.InputVariable
-    import fuzzy.defuzzify.Dict
-    import fuzzy.fuzzify.Dict
-    print "import ok"
-except:
-    print "not ok"
+
+import fuzzy.OutputVariable
+import fuzzy.InputVariable
+import fuzzy.defuzzify.Dict
+import fuzzy.fuzzify.Dict
+
+
 def main(argv, stdin=sys.stdin, stdout=sys.stdout, stderr=sys.stderr):
     import fuzzy.storage.fcl.Reader
     system = fuzzy.storage.fcl.Reader.Reader().load_from_file(argv[1])
-    print (repr(system))
+    
 
     from fuzzy.doc.plot.gnuplot import doc
     directory = "docs-"+argv[1]
-    try:
-        os.makedirs(directory)
-    except:
-        pass
+    
+    os.makedirs(directory)
+    
     d = doc.Doc(directory)
     d.createDoc(system)
 

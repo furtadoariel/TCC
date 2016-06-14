@@ -1,45 +1,39 @@
 FUNCTION_BLOCK Analyse_computational_resources
-
-
- 
     VAR_INPUT
-        Memory:    REAL; (* RANGE(0 .. 100) *)
-        CPU:    REAL; (* RANGE(0 .. 100) *)
+        Memory:    REAL;
+        CPU:    REAL;
     END_VAR
- 
     VAR_OUTPUT
-        Output : REAL; (* RANGE(0 .. 4) *)
+        Output : REAL;
     END_VAR
- 
     FUZZIFY Memory
-        TERM Underload := (0, 1) (20, 1) (30, 0) ;
-        TERM Good := (30, 1) (60, 1) (70, 0) ;
-        TERM Overload := (70, 0) (80, 1) (100, 1) ;
+        TERM Under := (0, 1) (30, 1) (35,0);
+        TERM Good := (0, 0) (31, 1) (70, 0);
+        TERM Over := (65,0 ) (70, 1) (100, 1);
     END_FUZZIFY
- 
     FUZZIFY CPU
-        TERM Underload := (0, 1) (20, 1) (30,0) ;
-        TERM Good := (30, 1) (60, 1) (70, 0) ;
-        TERM Overload := (70, 0) (80, 1) (100, 1) ;
+        TERM Under := (0, 1) (50, 0) (100,0);
+        TERM Good := (0, 0) (50, 1) (100, 0);
+        TERM Over := (0,0 ) (50, 0) (100, 1);
     END_FUZZIFY
- 
     DEFUZZIFY Output
-        TERM Realocate := 1 ; (*When this node is undercharged , relocates to another node and disable this one*)
-        TERM Distribuition := 2 ; (*When this node is overcharged, distributes his tasks to anothers nodes*)
-        TERM Ok := 3; (*When it is ok, do nothing*)
+        TERM Underload := 1;
+        TERM Overload := 2 ;
+        TERM Ok := 3;
         ACCU:MAX;
-        METHOD: COGS;(*MoM;*)
-        DEFAULT := 0; 
+        METHOD: COGS;
+        DEFAULT := 0;
     END_DEFUZZIFY
- 
     RULEBLOCK first
         AND:MIN;
-        (*ACCU:MAX;*)
-        RULE 0: IF (Memory IS Good) AND (CPU IS Good) THEN (Output IS Ok);
-        RULE 1: IF (Memory IS Underload) AND (CPU IS Good) THEN (Output IS Ok);
-        RULE 2: IF (Memory IS Overload) AND (CPU IS Good) THEN (Output IS Distribuition);
-        RULE 3: IF (Memory IS Good) AND (CPU IS Underload) THEN (Output IS Realocate);
-        RULE 4: IF (Memory IS Good) AND (CPU IS Overload) THEN (Output IS Distribuition);
+        RULE 1: IF (Memory IS Good) AND (CPU IS Good) THEN (Output IS Ok);
+        RULE 2: IF (Memory IS Good) AND (CPU IS Under) THEN (Output IS Underload);
+        RULE 3: IF (Memory IS Good) AND (CPU IS Over) THEN (Output IS Overload);
+        RULE 4: IF (Memory IS Under) AND (CPU IS Over) THEN (Output IS Overload);
+        RULE 5: IF (Memory IS Under) AND (CPU IS Good) THEN (Output IS Ok);
+        RULE 6: IF (Memory IS Under) AND (CPU IS Under) THEN (Output IS Underload);
+        RULE 7: IF (Memory IS Over) AND (CPU IS Over) THEN (Output IS Overload);
+        RULE 8: IF (Memory IS Over) AND (CPU IS Good) THEN (Output IS Ok);
+        RULE 9: IF (Memory IS Over) AND (CPU IS Under) THEN (Output IS Underload);
     END_RULEBLOCK
- 
 END_FUNCTION_BLOCK
