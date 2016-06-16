@@ -1,0 +1,115 @@
+# -*- coding: utf-8 -*-
+
+import sys,os
+#sys.path.insert(0, os.path.join(os.path.abspath(os.path.dirname(sys.argv[0])),os.path.pardir))
+import psutil
+from fuzzy import OutputVariable
+import fuzzy.InputVariable
+import fuzzy.defuzzify.Dict
+import fuzzy.fuzzify.Dict
+import fuzzy.storage.fcl.Reader
+from samsara.context_aware.contexts import host as host_contexts
+from samsara.context_aware import contexts_repository
+from samsara.global_controller import rpcapi as sgc_rpcapi
+from samsara.context_aware.interpreter.reason_engines.fuzzy import base
+from samsara.context_aware.situations import base as situations
+from oslo_context import context as os_context
+from oslo_serialization import jsonutils
+from oslo_log import log as logging
+
+
+
+#log
+LOG = logging.getLogger(__name__)
+
+
+class Rules_Fuzzy(base.FuzzyReasonEngine):
+
+    def __init__(self):
+
+        super(Rules_Fuzzy, self).__init__()
+
+        self.rules = None
+
+        # Contexts from host
+        self.host_contexts_handler = host_contexts.HostContexts()
+
+        # Get Host Info
+        self.host_info = self.host_contexts_handler.get_host_info()
+
+        # Samsara Global Controller RPC API
+        self.global_controller = sgc_rpcapi.GlobalControllerAPI()
+
+        self.output = dict(Output = 0.0)
+
+
+    def set_input(self):
+
+    	# takes the history of computing and memory and puts it in a list
+        compute_historical = self.host_contexts_handler.get_historical_compute_usage()
+        memory_historical = self.host_contexts_handler.get_historical_memory_usage()
+
+    	# takes the full capacity in MIPS of compute and the memory of the host and puts it in a variable
+        total_cpu = self.host_contexts_handler.get_host_info().compute_capacity
+        total_memory = self.host_contexts_handler.get_host_info().memory_capacity
+
+
+        cpu = []
+        memory = []
+
+        #transform the mips to percentual usage
+        for compute in compute_historical:
+            cpu.append(int((compute * 100)/total_cpu))
+        for mem in memory_historical:
+            memory.append(int((mem * 100)/total_memory))
+
+        input_dic = dict(CPU = [], Memory = [])
+        input_dic["CPU"] = reduce(lambda x, y: x + y ,cpu) / len(cpu)
+        input_dic["Memory"] = reduce(lambda x, y: x + y ,memory) / len(memory)
+
+    	#return a dictionay with input to fuzzy system
+        return input_dic
+
+    # get situation
+    def reason(self):
+        #print "Ariel é foda pacaralho"
+        LOG.info(self.set_input())
+        self.rules = self.load_rules("fuzzycontrollanguage.fcl")
+        self.rules.calculate(self.set_input(), self.output)
+        self.rules.reset()
+        LOG.info('SAIDA FUZZY: %s', self.output)
+        # Verify if the situation its normal, it is then, verify the number of instances
+        if (self.situations[self.output.values()[0]] == "normal") :
+            if len(self.host_contexts_handler.get_active_instances().instances) == 0:
+                self.output["Output"] += 1.0 #Tratar no dict <<< Erro
+        #LOG.info(self.situations[self.output.values()[0]])
+        self.notify_situation_to_controller(self.situations[self.output.values()[0]])
+
+
+    def notify_situation_to_controller(self, situation):
+
+        global host_resources_usage_ctx
+
+        #30 seconds to mars at window
+        host_resources_usage_ctx = self.host_contexts_handler.get_resources_usage(30)
+
+        #LOG.info('Local Situation: %s', situation)
+
+        os_ctx = os_context.RequestContext()
+
+        host_context     = host_resources_usage_ctx._asdict()
+        active_instances = [{'uuid':host['uuid'], 'used_compute': host['used_compute'], 'used_memory': int(host['used_memory'])} for host in self.host_contexts_handler.get_active_instances().instances]
+
+        host_context.update({'instances': jsonutils.dumps(active_instances)})
+
+
+        # Instantiate Host resources situation
+        host_situation = situations.Situation('host_situation', situation, host_context)
+
+
+        # Update Host Situation to Global Controller
+        self.global_controller.update_host_situation(os_ctx,
+                                                    self.host_info.hostname,
+                                                    jsonutils.dumps(host_situation.get_situation()._asdict()))
+
+        #LOG.info('Situation Update')

@@ -1,0 +1,56 @@
+# -*- coding: utf-8 -*-
+"""Base Rules Handler class.
+
+"""
+import sys,os
+sys.path.insert(0, os.path.join(os.path.abspath(os.path.dirname(sys.argv[0])),os.path.pardir))
+import psutil
+from fuzzy import OutputVariable
+import fuzzy.InputVariable
+import fuzzy.defuzzify.Dict
+import fuzzy.fuzzify.Dict
+import fuzzy.storage.fcl.Reader
+from oslo_config import cfg
+from oslo_log import log as logging
+from oslo_serialization import jsonutils
+from samsara.context_aware import contexts_repository
+
+fuzzy_rules_files_dir_path_opt = cfg.StrOpt('rules_location_dir',
+                                            default='/etc/samsara/rules/fuzzy',
+                                            help='Rules Fuzzy Control Language file location dir.')
+
+CONF = cfg.CONF
+CONF.register_opt(fuzzy_rules_files_dir_path_opt, group="fuzzy")
+
+LOG = logging.getLogger(__name__)
+
+class FuzzyReasonEngine(object):
+    """Base class to Fuzzy Reason Engines"""
+
+    def __init__(self):
+        self.situations = {
+            1.0 : "overloaded",
+            2.0 : "underloaded",
+            3.0 : "normal",
+            4.0 : "idle"
+        }
+
+
+    # def reason(self):
+    #
+    #     LOG.info('Reason rules')
+    #
+    #
+
+    def load_rules(self, filename):
+        """ Load rules file"""
+
+        dir_path = CONF.rules_location_dir
+        path = "{0}/{1}".format(dir_path,filename)
+
+        LOG.info('Load host rules')
+        try:
+            rules = fuzzy.storage.fcl.Reader.Reader().load_from_file(path)
+        except:
+            print "Não deu!"
+        return rules
